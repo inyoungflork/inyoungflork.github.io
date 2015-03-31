@@ -6,12 +6,3 @@ $('svg').ready(function(){
   
 });
 
-/
-$("a#thing_to_click").click(function(){
-         window.location = "http://www.google.com/";    
-});
-
-$('#something').click(function() { 
-    document.location = 'http://somewhere.com/';
-} );
-*/
