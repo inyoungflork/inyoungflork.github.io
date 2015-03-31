@@ -81,3 +81,7 @@ div.map a {
     opacity: 0; 
     filter: alpha(opacity=1);
 }
+
+svg {
+  z-index:99;
+}
