@@ -27,7 +27,7 @@
 }
 
 .map1 {
-  fill:rgb(200,100,100);
+  fill:rgb(250,150,150);
 } /*china_ yantze Finless Porpoise
     russia_ Amur Leopard*/
 
@@ -48,7 +48,7 @@
 } /*gulf of california,mexico _vaquita*/
 
 .Afro {
-  fill:rgb(200,200,200);
+  fill:rgb(230,200,100);
 } /*namibia_ Black Rhino
     congo_ Cross River Gorilla*/
 
@@ -57,16 +57,16 @@
 } /* */
 
 .indo {
-  fill:rgb(130,150,150);
+  fill:rgb(240,180,150);
 } /* */
 
 .indonesia {
-  fill:rgb(100,200,200);
+  fill:rgb(240,200,200);
 } /*Boreo Sumatra
     Sumatran Elephant,Rhino,Orangutan*/
 
 .reef {
-  fill:rgb(100,200,200);
+  fill:rgb(240,200,200);
 } /* coral tiangle _ Hawksbill Turtle*/
 
 div.map a {
