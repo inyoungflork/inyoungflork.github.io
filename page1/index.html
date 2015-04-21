@@ -157,7 +157,7 @@ p {
 .CR {
   width:42px;
   margin-top:9px;
-  cursor: alias;
+  cursor:help;
 }
 
 .threat {
@@ -366,8 +366,8 @@ $("Document").ready(function(){
   }); 
   
   $(".CR").click(function(){
-     window.location="index.html";
- 	});
+window.open('http://www.iucnredlist.org');return false;
+  });
   
   $(".back").click(function(){
      window.location="../index.html";
