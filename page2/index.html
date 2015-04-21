@@ -368,7 +368,7 @@ p {
 $("Document").ready(function(){
     
  
-  $("#porpoise1, .threat").click(function(){
+  $("#porpoise1, #porpoise2, .threat").click(function(){
     $("#hook, #hook2").animate({
       left: "+=0",
       top: "+=600"
@@ -398,6 +398,9 @@ window.open('http://www.iucnredlist.org');return false;
      window.location="../index.html";
  	});
   
+  $("#porpoise1, #porpoise2, .threat").click(function(){
+    $("#text").hide();
+    $("#text2").show();
   
 });
 
