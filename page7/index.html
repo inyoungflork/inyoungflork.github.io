@@ -11,9 +11,9 @@ Released under the MIT license: http://jsbin.mit-license.org
 <html>
 <head>
 <link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
   <meta charset="utf-8">
   <title>page7</title>
   <link href='http://fonts.googleapis.com/css?family=Ubuntu|Walter+Turncoat|Bree+Serif' rel='stylesheet' type='text/css'>
@@ -430,9 +430,10 @@ window.open('http://www.iucnredlist.org');return false;
   $( "#eggs" ).draggable();
     $( ".move" ).droppable({
       drop: function( event, ui ) {
-        $( this )
-          .addClass( "ui-state-highlight" 
-          );
+        //$( this )
+        //  .addClass( "ui-state-highlight" 
+        //  );
+        console.log('drop');
       }
     });
   

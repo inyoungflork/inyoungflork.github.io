@@ -483,15 +483,15 @@ $(document).ready(function(){
       top: "+=1000"
     }, 1500, function() {
       
-       
-    }).delay(2500);
+       $("#go1").animate({
+         left: "+=0",
+         top: "+=1000"
+       }, 2000, function() {     
+          
+       });  
+    });//.delay(2500);
     
-    $("#go1").animate({
-      left: "+=0",
-      top: "+=1000"
-    }, 2000, function() {     
-       
-    });  
+    
     
     
   });

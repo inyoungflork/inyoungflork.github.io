@@ -508,7 +508,7 @@ window.open('http://www.iucnredlist.org');return false;
     },
     stop: function(event) {
       $('#horn1, #horn2').attr('class', 'down');
-      $( '#Rhino1, #Rhino2' ).delay(1000).hide(2000);
+      $( '#Rhino1, #Rhino2' ).fadeOut(1000);//.delay(1000).hide(2000);
       $("#text").hide();
       $("#text2").show();
     }
