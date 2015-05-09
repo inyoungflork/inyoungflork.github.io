@@ -434,8 +434,19 @@ window.open('http://www.iucnredlist.org');return false;
         //  .addClass( "ui-state-highlight" 
         //  );
         console.log('drop');
-      }
-    });
+        // put animatio here.
+        $("#eggs, .move").animate({
+          top: "-=1000"
+        }, 1500, function() {
+          $("#turtle1, #turtle2").animate({
+            opacity: 0
+          }, 2000, function() {
+
+          });
+          });
+        }
+
+      });
   
   
   
