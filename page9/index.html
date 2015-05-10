@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2015 by inyoungflork (http://jsbin.com/hacemu/10/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <meta charset="utf-8">
+  <title>page9</title>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu|Walter+Turncoat|Bree+Serif' rel='stylesheet' type='text/css'>
+<style id="jsbin-css">
+body {
+  overflow:hidden;
+  margin-left:-10px;
+  background-color:black;
+}
+
+h1 {
+  position:absolute;
+  font-family:Ubuntu;
+  font-weight:900;
+  left:80px;
+  font-size:40px;
+  color: #B49B53;
+  margin-top:10px;
+  cursor: alias;
+}
+
+
+
+#wrap2 {
+  position: fixed; 
+  width: 100%; 
+  height: 100%;
+  z-index:2;
+} /* clickable */
+
+
+#wrap svg{
+  position:absolute;
+  margin-left:40%;
+  margin-top:20%;
+  width:25%;
+  cursor:crosshair;
+}
+
+p {
+  font-family:Walter turncoat;
+  font-size:17px;
+  hyphens:none;
+  padding-right:12px;
+  color:#595959;
+}
+
+#text{  
+  position:absolute;
+  z-index:2;
+  width:320px;
+  height:270px;
+  overflow:auto;
+  margin-left:76%;
+  margin-top:164px;
+  text-transform: ;
+  cursor: ns-resize;
+  color:#595959;
+}
+
+#text2{  
+  position:absolute;
+  z-index:2;
+  width:320px;
+  height:270px;
+  overflow:auto;
+  margin-left:76%;
+  margin-top:164px;
+  text-transform: ;
+  cursor: ns-resize;
+  display:none;
+}
+
+
+#navigation {
+  position:absolute;
+  width:600px; height:100px;
+  margin-left:368px;
+  margin-right:auto;
+  margin-top:0px;
+}
+
+.btn {
+  float:left;
+  margin:10px;
+  padding:5px;
+}
+
+.CR {
+  width:42px;
+  margin-top:9px;
+  margin-left:65px;
+  cursor:help;
+}
+
+.threat {
+  width:44px;
+  cursor:crosshair;
+}
+
+.more {
+  width:39px;
+  margin-top:9px;
+  cursor:alias;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,1); 
+    
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(0,0,0,0); 
+}
+
+.back {
+	position:fixed;
+  width: 0;
+	height: 0;
+	border-top: 18px solid transparent;
+	border-right: 28px solid black;
+	border-bottom: 18px solid transparent;
+  margin-top:15px;
+  margin-left:-335px;
+  cursor: w-resize;
+}
+
+#Tig {
+  fill: hsl(35, 65%, 49%);
+  
+-webkit-animation: glow-red 20s ease-in-out infinite;
+-moz-animation: glow-red 20s ease-in-out infinite;
+animation: glow-red 20s ease-in-out infinite;
+  
+  
+}
+
+
+@-webkit-keyframes glow-red {
+ 
+   0% { fill: hsl(35, 65%, 49%); }
+  50% { fill: hsl(0, 0%, 0%); }
+}
+@-moz-keyframes glow-red {
+    0% { fill: hsl(35, 65%, 49%); }
+   50% { fill: hsl(0, 0%, 0%); }
+}
+@keyframes glow-red { 
+    0% { fill: hsl(35, 65%, 49%); }
+   50% { fill: hsl(0, 0%, 0%); }
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+<h1>South China tiger</h1>
+  <div id="wrap">
+  
+    <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 515.9 256.6" enable-background="new 0 0 515.9 256.6" xml:space="preserve">
+
+<g id="Tiger">
+	<g>
+		<g>
+			<path id="Tig" fill="#D08B2C" d="M471.3,252c-3.4,0.5-7.1,0.9-11.1,1.3l-4.4-19.9H442l3.3,21l0,0.2c-2.9,0.2-6,0.4-9.2,0.6l-4.3-19.7H418
+				l3.2,20.4c-3,0.1-6.1,0.2-9.2,0.3l-4.3-17.8h-13.7l3.3,18v0.1c-5,0.1-10.1,0.1-15.6,0.1v-0.2l-2-13.3h-6.2l1.5,13.3v0.2
+				c-2.7,0-5.5,0-8.3,0v-0.2l-2-13.3h-6.2l1.5,13.3v0.1c-2.9,0-5.8-0.1-8.8-0.1l-2-13.3h-6.2l1.5,13.1c-4.2-0.1-8.5-0.2-12.9-0.3
+				c0,0-48,0-6-12l-52.1-10.6l-99.9,4.6L50,252.7H34L0,224l55.4-48.7l26.7-58.7l-7-25c0,0-8.3-26.3,15.7-48.3c0,0-14.7-30,5.3-43.3
+				l12,14c0,0,42.7-12,61.3,1.3L185.1,3c0,0,25.3,5.7,4,36.3c0,0,29,12,22.3,60c0,0,112-6,183.3,8.7C466,122.7,504,186,504,186
+				s26.7,42.7,0,58c0,0-2.9,2.4-15.2,5l-7.1-21.1l-13.7,3L471.3,252L471.3,252z M167.7,60.7l3.9-2c0,0-5.6-1.7-12.2-0.7
+				c-0.1,0-0.3,0-0.4,0.1c-6.8,1.1-7.4,12.9-7.4,12.9c4.6-0.2,7.8-1,10.2-2.1C168.2,65.8,167.7,60.7,167.7,60.7z M125.7,69.3
+				c0,0,1-6.4-5-10.5c-2.7-1.8-6.8-3.2-13-3.2l3.3,4.9c0,0,0.1,2.5,1.8,5C114.6,68.1,118.3,70.5,125.7,69.3z"/>
+			<path fill="#181411" d="M481.7,227.9l7.1,21.1c-4.5,1-10.2,2-17.6,3l0-0.1l-3.3-21L481.7,227.9z"/>
+			<path fill="#181411" d="M455.8,233.4l4.4,19.9c-4.5,0.5-9.4,0.9-14.8,1.3l0-0.2l-3.3-21H455.8z"/>
+			<path fill="#181411" d="M431.8,235.4l4.3,19.7c-4.6,0.3-9.6,0.5-14.9,0.7l-3.2-20.4H431.8z"/>
+			<path fill="#181411" d="M407.7,238.4l4.3,17.8c-4.7,0.1-9.6,0.2-14.8,0.3v-0.1l-3.3-18H407.7z"/>
+			<path fill="#181411" d="M381.6,256.4v0.2c-2.2,0-4.5,0-6.8,0v-0.2l-1.5-13.3h6.2L381.6,256.4z"/>
+			<path fill="#181411" d="M366.6,256.4v0.2c-2.2,0-4.5,0-6.8-0.1v-0.1l-1.5-13.3h6.2L366.6,256.4z"/>
+			<path fill="#181411" d="M349,243.2l2,13.3c-2.2,0-4.5-0.1-6.8-0.1l-1.5-13.1H349z"/>
+			<path d="M171.6,58.7l-3.9,2c0,0,0.5,5.1-5.9,8.1l-0.3-0.9c1.8-0.6,3.2-2.3,3.2-4.3c0-2.5-2.1-4.6-4.6-4.6c-0.2,0-0.3,0-0.5,0
+				l-0.1-1C165.9,57,171.6,58.7,171.6,58.7z"/>
+			<path fill="#B49B53" d="M160,59c2.5,0,4.6,2,4.6,4.6c0,2-1.3,3.7-3.2,4.3c-0.4,0.1-0.9,0.2-1.4,0.2c-2.5,0-4.6-2.1-4.6-4.6
+				c0-2.4,1.8-4.3,4.1-4.6C159.7,59,159.8,59,160,59z M161.6,63.6c0-0.9-0.7-1.6-1.6-1.6c-0.9,0-1.6,0.7-1.6,1.6
+				c0,0.9,0.7,1.6,1.6,1.6C160.8,65.1,161.6,64.4,161.6,63.6z"/>
+			<path d="M161.4,67.9l0.3,0.9c-2.4,1.1-5.6,1.9-10.2,2.1c0,0,0.6-11.8,7.4-12.9c0.1,0,0.3,0,0.4-0.1l0.1,1
+				c-2.3,0.2-4.1,2.2-4.1,4.6c0,2.5,2.1,4.6,4.6,4.6C160.5,68.1,160.9,68.1,161.4,67.9z"/>
+			<path d="M160,62c0.9,0,1.6,0.7,1.6,1.6c0,0.9-0.7,1.6-1.6,1.6c-0.9,0-1.6-0.7-1.6-1.6C158.4,62.7,159.1,62,160,62z"/>
+			<path d="M120.7,58.8c5.9,4,5,10.5,5,10.5c-7.4,1.2-11.1-1.2-12.9-3.8l0.5-0.4c0.8,1.2,2.2,2,3.8,2c2.5,0,4.6-2.1,4.6-4.6
+				c0-1.4-0.7-2.7-1.7-3.5L120.7,58.8z"/>
+			<path d="M120.7,58.8l-0.8,0.2c-0.8-0.6-1.8-1-2.9-1c-2.5,0-4.6,2-4.6,4.6c0,0.9,0.3,1.8,0.8,2.6l-0.5,0.4c-1.7-2.4-1.8-5-1.8-5
+				l-3.3-4.9C113.9,55.7,118,57,120.7,58.8z"/>
+			<path id="eye" fill="#B49B53" d="M119.9,59c1,0.9,1.7,2.1,1.7,3.5c0,2.5-2.1,4.6-4.6,4.6c-1.6,0-3-0.8-3.8-2c-0.5-0.7-0.8-1.6-0.8-2.6
+				c0-2.5,2.1-4.6,4.6-4.6C118.2,58,119.2,58.4,119.9,59z M118.3,62.6c0-0.9-0.7-1.6-1.6-1.6c-0.9,0-1.6,0.7-1.6,1.6
+				c0,0.9,0.7,1.6,1.6,1.6C117.6,64.2,118.3,63.5,118.3,62.6z"/>
+			<path d="M116.7,61.1c0.9,0,1.6,0.7,1.6,1.6c0,0.9-0.7,1.6-1.6,1.6c-0.9,0-1.6-0.7-1.6-1.6C115.1,61.8,115.8,61.1,116.7,61.1z"/>
+		</g>
+		<g>
+			<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M161.7,68.8c-2.4,1.1-5.6,1.9-10.2,2.1
+				c0,0,0.6-11.8,7.4-12.9c0.1,0,0.3,0,0.4-0.1c6.6-1,12.2,0.7,12.2,0.7l-3.9,2C167.7,60.7,168.2,65.8,161.7,68.8z"/>
+			<path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M112.8,65.5c1.8,2.6,5.5,5,12.9,3.8
+				c0,0,1-6.4-5-10.5c-2.7-1.8-6.8-3.2-13-3.2l3.3,4.9C110.9,60.5,111.1,63.1,112.8,65.5z"/>
+			<path fill="none" stroke="#B49B53" stroke-miterlimit="10" d="M119.9,59c1,0.9,1.7,2.1,1.7,3.5c0,2.5-2.1,4.6-4.6,4.6
+				c-1.6,0-3-0.8-3.8-2c-0.5-0.7-0.8-1.6-0.8-2.6c0-2.5,2.1-4.6,4.6-4.6C118.2,58,119.2,58.4,119.9,59z"/>
+			<path fill="none" stroke="#B49B53" stroke-miterlimit="10" d="M159.5,59c0.2,0,0.3,0,0.5,0c2.5,0,4.6,2,4.6,4.6
+				c0,2-1.3,3.7-3.2,4.3c-0.4,0.1-0.9,0.2-1.4,0.2c-2.5,0-4.6-2.1-4.6-4.6C155.4,61.2,157.2,59.2,159.5,59z"/>
+			<path fill="none" stroke="#B49B53" stroke-miterlimit="10" d="M161.6,63.6c0-0.9-0.7-1.6-1.6-1.6c-0.9,0-1.6,0.7-1.6,1.6
+				c0,0.9,0.7,1.6,1.6,1.6C160.8,65.1,161.6,64.4,161.6,63.6z"/>
+			<path fill="none" stroke="#B49B53" stroke-miterlimit="10" d="M118.3,62.6c0-0.9-0.7-1.6-1.6-1.6c-0.9,0-1.6,0.7-1.6,1.6
+				c0,0.9,0.7,1.6,1.6,1.6C117.6,64.2,118.3,63.5,118.3,62.6z"/>
+		</g>
+	</g>
+</g>
+</svg>
+   
+  </div>
+  
+    <div id="wrap2"> 
+       <div id="navigation">
+        <div class="btn CR"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="CR" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 320 320" enable-background="new 0 0 320 320" xml:space="preserve">
+<circle fill="#2e2e2e" cx="160" cy="160" r="160"/>
+<rect x="18.2" y="98.8" fill="none" width="281.5" height="128.1"/>
+<text transform="matrix(1 0 0 1 47.7072 220.3237)" fill="#595959" font-family="'Futura'" font-size="162" letter-spacing="6">CR</text>
+</svg>
+</div>
+        <div class="btn threat"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="TR" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 345.2 300" enable-background="new 0 0 345.2 300" xml:space="preserve">
+<polygon fill="#2e2e2e" points="-1.2,300 172,0 345.2,300 "/>
+<rect x="0" y="85.1" fill="none" width="343.3" height="219.7"/>
+<text transform="matrix(1 0 0 1 126.5434 259.1364)" fill="#595959" font-family="'futura'" font-size="230">!</text>
+</svg>
+</div>
+        <div class="btn more"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+<g>
+	<rect x="0" y="0" fill="#2e2e2e" width="300" height="300"/>
+</g>
+<rect x="-21.7" y="85" fill="none" width="343.3" height="259.8"/>
+<text transform="matrix(1 0 0 1 91.9996 259.0085)" fill="#595959" font-family="'futura'" font-size="230">?</text>
+</svg>
+</div>
+        <div class="back"></div>
+      </div>
+
+    </div>
+ 
+  
+
+   <div id="text">
+      <p>The South China tiger population was estimated to number 4,000 individuals in the early 1950s. In the next few decades, thousands were killed as the subspecies was hunted as a pest. The Chinese government banned hunting in 1979. By 1996 the population was estimated to be just 30-80 individuals.
+
+Today the South China tiger is considered by scientists to be “functionally extinct,” as it has not been sighted in the wild for more than 25 years.</p> 
+     </div>
+        <div id="text2">
+          <p>South China tigers are a reminder that the threat against the world’s tiger is an urgent one. Today, South China tigers are found in zoos and in South Africa where there are plans to reintroduce captive-bred tigers back into the wild.
+          <br><br>Although China outlawed tiger hunting in 1979 and declared the South China tiger's survival a conservation priority in 1995, it is thought that even if a few individuals remain, no existing protected areas or habitat are sufficiently large, healthy or undisturbed enough to sustain viable tiger populations.<br><br>If any South China tigers remain in the wild, these few individuals would be found in montane sub-tropical evergreen forest of southeast China, close to provincial borders. The habitat is highly fragmented, with most blocks smaller than 200 square miles and not large enough to sustain a tiger population.
+        </p>
+        </div>
+ 
+  
+    
+  
+<script id="jsbin-javascript">
+
+$("Document").ready(function(){
+ 
+  $(".more").click(function(){
+    window.open('http://en.wikipedia.org/wiki/South_China_tiger');return false;
+    
+  });
+  
+  $(".CR").click(function(){
+window.open('http://www.iucnredlist.org');return false;
+ 	});
+  
+  $(".back").click(function(){
+     window.location="../index.html";
+ 	});
+  
+  $(".threat, #Tig").click(function(){
+    $("#text").hide();
+    $("#text2").show();
+  
+  }); 
+  
+  
+
+ 
+  
+});
+
+//$(hide( "drop", {direction: "up"}, 1000 );$("div").animate({left: '250px'});
+
+
+
+/*
+
+$('.background_animation_element').addClass('yellow');
+
+-webkit-animation: glow-red 4s ease-in-out infinite;
+-moz-animation: glow-red 4s ease-in-out infinite;
+animation: glow-red 4s ease-in-out infinite;
+
+@-webkit-keyframes glow-red {
+    0% { fill: hsl(23, 15%, 61%); }
+  100% { fill: hsl(0, 100%, 50%); }
+}
+@-moz-keyframes glow-red {
+    0% { fill: hsl(23, 15%, 61%); }
+  100% { fill: hsl(0, 100%, 50%); }
+}
+@keyframes glow-red { 
+    0% { fill: hsl(23, 15%, 61%); }
+  100% { fill: hsl(0, 100%, 50%); }
+}
+
+    $('body').mousedrag(function(event) {
+  }, {
+    start: function(event) {
+    },
+    stop: function(event) {
+      $('#horn1, #horn2').attr('class', 'down');
+      $( '#Rhino1, #Rhino2' ).delay(1000).hide(2000);
+      $("#text").hide();
+      $("#text2").show();
+    }
+  });
+
+*/
+</script>
+</body>
+</html>
