@@ -1,2 +1,0 @@
-# safekorea
-gdweb00
