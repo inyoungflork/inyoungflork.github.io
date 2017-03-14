@@ -1,0 +1,537 @@
+/* CSS RESET */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;}
+body {line-height:1;}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {display:block;}
+li{list-style:none;}
+a {margin: 0; padding: 0; border: 0; vertical-align: baseline; background: transparent; text-decoration: none; outline: none;}
+
+html, body {height: 100%;}
+body{font-family: Open Sans, sans-serif;}
+.clearfixafter:after {content: ""; display: block; clear: both;}
+     
+
+/*---- COMMON ----*/  
+body {
+    overflow-x: hidden;
+}
+
+#page1, #page2, #page3, #page4 {
+    width: 100%;
+    height: 100%;
+    min-width: 1280px;
+    min-height: 720px;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*---- HEADER DESIGN ----*/  
+
+header {
+    text-align: center;
+}
+
+.nav li {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin: 40px 20px;
+    display: inline-block;
+    text-shadow: 1px 2px 5px #363636;
+}
+
+.nav li a {
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav li a:hover {
+    opacity:0.8;
+}
+
+.download li {
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+
+.download li:hover {
+    opacity:0.7;   
+}
+
+.download li img {
+    width: 150px;
+    transition: all .2s ease-in-out;
+}
+
+/*---- sticky HEADER DESIGN ----*/ 
+
+header.sticky{
+    width: 100%;
+    min-width: 1280px;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.sticky .logo {
+    float: left;
+}
+
+.sticky .logo img {
+    width: 100px;
+    margin: 12px 40px 0 40px;
+}
+
+.sticky .nav {
+    float: left;
+}
+
+.sticky .download {
+    float: right;
+}
+
+.sticky .download li {
+    margin: 40px 30px 0 0;
+}
+
+.sticky .download li img {
+    width: 100px;
+}
+
+
+
+/*---- PAGE 1 DESIGN ----*/ 
+#page1 {
+    background-image: url(imgs/page1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: table;
+}
+
+
+
+/*---- PAGE 2 DESIGN ----*/ 
+
+#page2 {
+    background-color: #3498db;
+    text-align: center;
+    color: #fff;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.page2-wrap {
+    width: 700px;
+    height: 100%;
+    display: table;
+    margin: 0 auto;
+    position: relative;
+}
+
+.page2-title {
+    margin-bottom: 40px;   
+}
+
+.armies {
+    position: absolute;
+    bottom: -100px;
+    left: -360px;
+    z-index: 900;
+}
+
+.terror {
+    position: absolute;
+    bottom: -60px;
+    right: -350px;
+    z-index: 900;
+}
+
+.page2-content {
+    position: relative;
+    z-index: 998;
+}
+
+
+/*---- PAGE 3 DESIGN ----*/
+
+#page3 {
+    background-color: #ed5f55;
+    background-image: url(imgs/bg3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    position: relative;
+}
+
+#tabs {
+    width: 780px;
+    height: 620px;
+    margin: 0 auto;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    
+    margin:-310px 0 0 -390px;
+}
+
+#tabs iframe {
+    border: 10px solid rgba(255,255,255,0.7);
+}
+
+#tabs div {
+    width: 780px;
+    height: 476px;
+    background-image: url(imgs/shadow.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+
+.tab-nav {
+    width: 645px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -322px;
+}
+
+.tab-nav li {
+    float: left;
+    margin: 0 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.tab-nav li:hover {
+    opacity:0.8;   
+}
+
+/*---- PAGE 4 DESIGN ----*/
+
+#page4 {
+    background-color: #3498db;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    position: relative;
+}
+
+#page4 .nudge{
+    height:210px;  
+    background-color:#ed5f55;
+}
+
+#page4 .heavy {
+    width:1050px;
+    height:670px;
+    margin:0 auto;
+    margin-top:-100px;
+    position: relative;
+}
+
+#page4 .heavy .character {
+    float:left;
+    height:670px;
+}
+
+#page4 .heavy .name {
+    margin-top:120px;
+    margin-left:20px;
+}
+
+#page4 .heavy .description {
+    display:inline-block; 
+    font-size:14px;
+    line-height:1.5;
+    color:#fff;
+    width:600px;
+    margin-top:10px;
+    margin-left:22px;
+}
+
+.stats {
+    display:inline-block;
+    width:600px;
+    font-weight:bold;
+    height:360px;
+    font-size:20px;
+    margin-top:20px;
+    margin-left:20px;
+}
+
+.stats .top {
+    position:relative;
+    background-color:#ed5f55;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding:15px 0 0 20px;
+    color:#fff;
+    height:35px;
+}
+
+.stats .top a {
+    position:absolute;
+    display:inline-block;
+    color:#fff;
+    margin-top:5px;
+    margin-left:330px; 
+    font-size:14px;
+    width:60px;
+}
+
+.stats .top i{
+    margin-left:5px;   
+}
+
+.stats .title li {
+    padding:18px 20px;
+    background-color:#fff;
+    border-right:1px solid #e1e1e1;
+}
+
+.stats .title{
+    display:inline-block;
+    width:299px;
+}
+
+.stats .numbers li {
+    color:#7e7e7e;   
+    padding:18px 20px;
+    background-color:#fff;
+}
+
+.stats .numbers{
+    display:inline-block;  
+    width:300px;
+    margin-left:-5px;
+}
+
+#page4 .stats .bluer {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    background-color:#f7faff;
+}
+
+#page4 .btn .left {
+    position:absolute;
+    left:-100px;   
+    top:310px;
+}
+
+#page4 .btn .right {
+    position:absolute;
+    right:-100px;   
+    top:310px;
+}
+
+#page4 a {
+    transition: all 0.2s ease-in-out;   
+}
+
+#page4 a:hover {
+    opacity:0.8;   
+}
+
+#page4 .btn a:hover {
+    opacity:0.7;   
+}
+
+/*---- PAGE 5 DESIGN ----*/
+
+#page5 {
+    background-color: #7277d5;  
+    min-width: 1280px;
+    min-height: 720px;
+}
+
+#page5 .news{
+    padding-top:160px;
+    padding-bottom:80px;  
+}
+
+#page5 .center{
+    text-align: center;   
+}
+
+#page5 .board{
+    height:618px;
+    width:1180px;
+    margin:0 auto;
+}
+
+#page5 .updates{
+    position:relative;
+    display:inline-block;
+    width:580px;
+    background-color:#4fc2e7;
+    height:276px;
+    float:left;
+}
+
+#page5 .community{
+    position:relative;
+    display:inline-block;
+    width:580px;
+    background-color:#4fc2e7;
+    height:276px;
+    margin-left:20px;
+    
+}
+
+#page5 .events{
+    position:relative;
+    width:1180px;
+    height:320px;
+    background-color:#4fc2e7;
+    margin-top:20px;
+}
+
+#page5 h2 a {
+    position:absolute;
+    font-size:32px;
+    color:white;
+    padding-top:40px;
+    padding-left:40px;
+    transition: all 0.2s ease-in-out;
+}
+
+#page5 h2 a:hover {
+    opacity:0.7;   
+}
+
+#page5 .updates p {
+    font-size:14px;
+    line-height: 22px;
+    color:white;
+    margin-top:90px;
+    padding-left:40px;
+    width:320px;
+    letter-spacing:-0.015em;
+}
+
+#page5 .community p {
+    font-size:14px;
+    line-height: 22px;
+    color:white;
+    margin-top:90px;
+    padding-left:40px;
+    width:280px;
+    letter-spacing:-0.015em;
+}
+
+#page5 .events p {
+    position:absolute;
+    font-size:14px;
+    line-height: 22px;
+    color:white;
+    margin-top:90px;
+    padding-left:40px;
+    width:280px;
+    letter-spacing:-0.015em;
+}
+
+#page5 .more{
+    color:white;
+    text-decoration: underline;
+    padding-left:40px;
+    transition: all 0.2s ease-in-out;
+}
+
+#page5 .more:hover {
+    opacity:0.7;   
+}
+
+#page5 .updates img{
+    position:absolute;
+    z-index: 1;
+    top:-50px;
+    left:370px;
+}
+
+#page5 .community img{
+    position:absolute;
+    z-index: 1;
+    top:0px;
+    margin-left:290px;
+}
+
+#page5 .events img{
+    position:absolute;
+    z-index: 1;
+    top:10px;
+    margin-left:320px;
+}
+
+
+/*---- FOOTER DESIGN ----*/
+#footer {
+    background-color: #7277d5;
+    width:100%;
+    text-align: center;
+}
+
+#footer .social {
+    padding-top:110px;
+    margin-top:-90px;
+}
+
+#footer .social li{
+    display:inline-block;
+    padding:15px;
+    margin:10px;
+}
+
+#footer .menu li{
+    display: inline-block;
+    margin-top:30px;
+    font-size:12px;
+}
+
+#footer .line{
+    width:1px;
+    height:16px;
+    background-color:white;
+    display:inline-block;
+    margin: -4px 10px;
+}
+
+#footer .menu a{
+    color:white;   
+}
+
+#footer p{
+    font-size:12px;
+    color:white;
+    margin-top:20px;
+    padding-bottom:60px;
+}
+
+#footer .social i{
+    color:rgba(255,255,255,0.9);
+    font-size:28px;
+}
+
+#footer a {
+    transition: all 0.2s ease-in-out;
+}
+
+#footer a:hover {
+    opacity:0.7;   
+}
