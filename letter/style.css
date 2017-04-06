@@ -12,6 +12,10 @@ a {
     font-family: serif;
 }
 
+.letter {
+    font-family: serif;
+}
+
 #noback {
     font-size:72px;   
     border:none;
