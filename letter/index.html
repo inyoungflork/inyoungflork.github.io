@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+
+        <meta charset="utf-8">
+        <title>Inbox</title>
+        <link rel="stylesheet" href="sub/style.css">
+        <script src="jquery-3.2.0.js"></script>    
+    
+ 
+     <script type='text/javascript'>
+        $(document).ready(function() {
+            $('.one').click(function() {
+                $(".one").hide();
+                $(".two").show();
+        });
+            
+            $('.two').click(function() {
+                $(".two").hide();
+                $(".three").show();
+        });
+            
+            $('.three').click(function() {
+                $("#heartR").addClass("flipped");
+        });
+});
+    
+ </script>
+            
+    <script type="text/javascript">
+        
+    </script>
+        
+</head>
+    
+<body>
+    
+    <div class="board">
+        
+        <a href="">
+        <p id="arch">Archive</p>
+        </a>
+        
+        <a href="noback.html">
+            <p>Trace</p>
+        </a>
+        <a href="rhythm.html">
+            <p>Rhythm</p>
+        </a>
+        <a>
+            <p>Fold / Unfold</p>
+        </a>
+    
+    </div>
+    
+    
+    <div class="letter">
+        <img src="img/heartL.svg" id="heartL">
+        <a href="sub/valentine.html"><img src="img/heartR.svg" id="heartR"></a>
+        <p class="one"> Letter </p>
+        <p class="two"> From John </p>
+        <p class="three"> Open me </p>
+    </div>
+        
+</body>
+    
+</html>

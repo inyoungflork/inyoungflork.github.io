@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+
+        <meta charset="utf-8">
+        <title>Trace</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery-3.2.0.js"></script>    
+    
+    <script>
+ 
+         $(function(){
+    $(document).click(function(e){
+        var x = e.pageX + 'px';
+        var y = e.pageY + 'px';
+        var img = $('<img src="" alt="click" />');
+        var div = $('<div>').css({
+            "position": "absolute",                    
+            "left": x,
+            "top": y
+        });
+        div.append(img);
+        $(document.body).append(div);   
+        
+        
+    });
+});
+            
+    </script>
+    <script type="text/javascript">
+            function no_backspaces(event)
+            {
+                backspace = 8;
+                if (event.keyCode == backspace) event.preventDefault();
+            }
+        
+    </script>
+    
+    
+</head>
+    
+<body>
+    
+      
+    <div id="input">
+        <textarea type="text" id="noback" cols="36" rows="8"  onkeydown="no_backspaces(event);" autofocus></textarea>
+    </div>
+     
+    
+    
+    
+    
+</body>
+    
+</html>

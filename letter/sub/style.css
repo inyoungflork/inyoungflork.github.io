@@ -1,0 +1,82 @@
+
+.letter {
+    position:absolute;
+    right:300px;
+    bottom:200px;
+    width:200px;
+    height:200px;
+    text-align: center;
+}
+
+.letter img {
+    position:absolute;
+    width:90px;
+    
+}
+
+.letter p {
+    font-size: 18px;
+    font-family:;
+}
+
+.one {
+    position:absolute;
+    left:0; right:0; top:150px;
+    display: block;  
+}
+
+.two {
+    position:absolute;
+    left:0; right:0; top:150px;
+    display: none;
+}
+
+.three {
+    position:absolute;
+    left:0; right:0; top:150px;
+    display: none;
+}
+
+#heartL {
+    left:10px;
+}
+
+#heartR {
+    
+    opacity:0;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-out;
+    transform: rotateY( 85deg );
+    right:50px;
+}
+
+#heartR.flipped {
+    
+    opacity:1;
+    transform: rotateY( 0deg );
+    transform: translate( 39px,0 );
+}
+
+.board {
+    position:absolute;
+    font-size:72px;
+    left:30px;
+}
+
+arch {
+    position: relative;
+    left:30px;   
+    margin-bottom:-20px; margin-top:60px;
+}
+
+.board a {
+    text-decoration: none;
+    color:black;
+    float:left;
+    margin:0px 25px;
+}
+
+.letterimg img {
+    width:300px; 
+    padding:10px 20px;
+}

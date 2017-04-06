@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+
+        <meta charset="utf-8">
+        <title>Rhythm</title>
+        <script src="jquery-3.2.0.js"></script>    
+        <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+            
+    $(function(){
+        $(document).click(function(e){
+        var x = e.pageX + 'px';
+        var y = e.pageY + 'px';
+        var input = $('<input type="text" class="two" id="noclick" size="" onkeydown="no_backspaces(event);" autofocus/>')
+        var div = $('<div>').css({
+            "position": "absolute",                    
+            "left": x, "top": y,
+            
+        });
+        div.append(input);
+        $(document.body).append(div);  
+        
+        $('.two').click(false);
+       
+        
+        
+    });
+                
+        
+                
+});
+            
+        </script>
+    <script type="text/javascript">
+            function no_backspaces(event)
+            {
+                backspace = 8;
+                if (event.keyCode == backspace) event.preventDefault();
+            }
+    
+    </script>
+</head>
+    
+<body>
+        
+    
+</body>
+    
+</html>

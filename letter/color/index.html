@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+
+        <meta charset="utf-8">
+        <title>Trace</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery-3.2.0.js"></script>    
+        <link rel="stylesheet" type="text/css" href="semantic.min.css">
+        <script src="semantic.min.js"></script>
+    
+    <script>
+ 
+    $(document).ready(function() {    
+        
+});
+            
+    </script>
+    <script type="text/javascript">
+            function no_backspaces(event)
+            {
+                backspace = 8;
+                if (event.keyCode == backspace) event.preventDefault();
+            }
+    
+        
+        </script>
+        
+</head>
+    
+<body>
+        
+    <div class="ui transparent input">
+        <input type="text" id="typeHere" onkeydown="no_backspaces(event);" placeholder="" >
+    </div>
+    
+</body>
+    
+</html>
