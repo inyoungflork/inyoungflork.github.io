@@ -9,11 +9,11 @@ a {
 }
 
 .board {
-    font-family: serif;
+    font-family: 'times new roman',serif;
 }
 
 .letter {
-    font-family: serif;
+    font-family: 'times new roman',serif;
 }
 
 #noback {
