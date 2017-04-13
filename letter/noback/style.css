@@ -1,0 +1,63 @@
+body {
+    width:auto;
+    overflow: auto;
+}
+
+a {
+    text-decoration: none;   
+    color:black;
+}
+
+.board {
+    font-family: 'times new roman',serif;
+}
+
+.letter {
+    font-family: 'times new roman',serif;
+}
+
+#noback {
+    font-size:72px;   
+    border:none;
+    resize: none;
+    margin-top:50px; 
+    margin-left:70px;
+}
+
+.two {
+    font-size:54px;
+    width:;
+    height:;
+    border:none;
+    
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.noti {
+    width:250px;
+    text-align: center;
+    position:absolute;
+    left:0; right:0; margin:auto;
+    top:45%;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.2);
+    font-size:18px;
+    animation-name: fadeout;
+    animation-duration: 4s;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes fadeout {
+    from {opacity:1;}
+    to {opacity:0;}
+}
+
+.noti p {
+    padding:10px;   
+}

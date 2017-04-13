@@ -1,0 +1,38 @@
+body {
+    
+}
+
+#noback {
+    font-size:72px;   
+    border:none;
+    resize: none;
+    margin-top:50px; 
+    margin-left:70px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+#input {
+    z-index: -1;
+}
+
+#divContainer { 
+            background-color:white; 
+            width:40px; 
+            height:40px; 
+            padding:5px; 
+            margin:5px; 
+            font:13px Arial; 
+            cursor:move; 
+            left:50px;
+        } 
+
+#btClickMe {
+    margin-top:-50px;
+}

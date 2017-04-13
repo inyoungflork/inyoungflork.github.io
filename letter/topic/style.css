@@ -1,0 +1,66 @@
+body {
+    width:auto;
+    overflow: auto;
+    font-family: sans-serif;
+}
+
+.two {
+    font-size:54px;
+    width:;
+    height:;
+    border:none;
+    
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.load {
+    width:200px; height:100px; 
+    position: absolute;
+    top:10px; left:10px;
+}
+
+.divide-img {
+    width:230px; height:230px;
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 99;
+}
+
+.noti {
+    text-align: center;
+    animation:fadeout 3s;
+    animation-timing-function:ease-in-out;
+    animation-delay:;
+    animation-fill-mode:forwards;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation:fadeout 3s;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-animation-delay:;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeout { 
+    0%{opacity:0;}
+    10%{opacity:1;}
+    20%{opacity:0;}
+    30%{opacity: 1;}
+    70%{opacity: 1;}
+    100%{opacity:0;} 
+}
+@keyframes fadeout {
+    0%{opacity:0;}
+    10%{opacity:1;}
+    20%{opacity:0;}
+    30%{opacity: 1;}
+    70%{opacity: 1;}
+    100%{opacity:0;}  
+}
