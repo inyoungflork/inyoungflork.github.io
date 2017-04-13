@@ -3,7 +3,13 @@
    margin:0px;
  }
 
-
+#text {
+    font-size:72px;   
+    border:none;
+    resize: none;
+    margin-top:50px; 
+    margin-left:70px;
+}
 
 textarea:focus, input:focus{
     outline: none;

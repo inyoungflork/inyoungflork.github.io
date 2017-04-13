@@ -1,0 +1,57 @@
+body {
+      height: 3000px;
+    }
+
+.dot {
+      width: 2px;
+      height: 2px;
+      background-color: black;
+      position: absolute;
+      z-index: -1;
+    }
+
+body {
+    
+}
+
+#noback {
+    font-size:72px;   
+    border:none;
+    resize: none;
+    margin-top:50px; 
+    margin-left:70px;
+    z-index:99;
+    background-color: transparent;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+#input {
+    z-index: 99;
+}
+
+#divContainer { 
+            background-color:white; 
+            width:40px; 
+            height:40px; 
+            padding:5px; 
+            margin:5px; 
+            font:13px Arial; 
+            cursor:move; 
+            left:50px;
+        } 
+
+#divContainer div {
+       
+}
+
+#btClickMe {
+    margin-top:-50px;
+    z-index: 999;
+}
