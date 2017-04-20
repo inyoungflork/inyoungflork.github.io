@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="style.css">
         <script type="text/javascript" src="script.js"></script>
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+        <script src="../html2canvas.js"></script>
         
     <script type="text/javascript">
             
@@ -52,6 +54,23 @@
     $('.divide-img').each(function(i){
         $(this).css({'background-image': 'url(' + images[i] + ')'});  
     });
+            
+            
+        $(function() { 
+    $("#btnSave").click(function() { 
+        html2canvas($("body"), {
+            onrendered: function(canvas) {
+                theCanvas = canvas;
+                document.body.appendChild(canvas);
+
+                canvas.toBlob(function(blob) {
+					saveAs(blob, "letter.png"); 
+				});
+            }
+        });
+    });
+}); 
+            
 }); 
     </script>
     
@@ -63,8 +82,11 @@
         <div class="divide-img"></div>
         <div class="divide-img"></div>
         <div class="divide-img"></div>
-
     </div>
+    
+    <input type="button" id="btnSave" value="Save your Letter"/>
+    <div id="img-out"></div>
+    
 </body>
     
 </html>

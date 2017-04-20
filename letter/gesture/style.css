@@ -1,5 +1,5 @@
 body {
-      height: 3000px;
+      height: 100%;
     }
 
 .dot {
@@ -11,7 +11,7 @@ body {
     }
 
 body {
-    
+    background-color: white;
 }
 
 #noback {
@@ -34,6 +34,7 @@ textarea:focus, input:focus{
 
 #input {
     z-index: 99;
+    background-color: ;
 }
 
 #divContainer { 
@@ -44,7 +45,7 @@ textarea:focus, input:focus{
             margin:5px; 
             font:13px Arial; 
             cursor:move; 
-            left:50px;
+            left:110px;
         } 
 
 #divContainer div {
@@ -54,4 +55,9 @@ textarea:focus, input:focus{
 #btClickMe {
     margin-top:-50px;
     z-index: 999;
+}
+
+#btnSave {
+    position: absolute;
+    bottom:10px;
 }

@@ -4,11 +4,11 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<script src="../jquery-3.2.0.js"></script>    
     <link rel="stylesheet" href="style.css">
-	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js">
-    </script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
     <script src="../html2canvas.js"></script>
     <title>Gesture</title>
+    
 
 <script>
   (function() {
@@ -61,6 +61,28 @@
     return color;
 }
     
+    
+    function CanvalHD(canvasThis,ctxThis){
+(function (canvas, ctx) {
+var devicePixelRatio = window.devicePixelRatio || 1;
+var backingStorePixelRatio = ctx.webkitBackingStorePixelRatio ||
+ctx.mozBackingStorePixelRatio ||
+ctx.msBackingStorePixelRatio ||
+ctx.oBackingStorePixelRatio ||
+ctx.backingStorePixelRatio || 1;
+var ratio = devicePixelRatio / backingStorePixelRatio;
+if (devicePixelRatio !== backingStorePixelRatio) {
+var oldWidth = canvas.width;
+var oldHeight = canvas.height;
+canvas.width = oldWidth * ratio;
+canvas.height = oldHeight * ratio;
+canvas.style.width = oldWidth + 'px';
+canvas.style.height = oldHeight + 'px';
+ctx.scale(ratio, ratio);
+}
+})(canvasThis, ctxThis);
+}
+    
         
 </script>
    <script>
@@ -93,8 +115,7 @@
             iCnt = iCnt + 1;
         });
         
-        
-         $(function() { 
+        $(function() { 
     $("#btnSave").click(function() { 
         html2canvas($("body"), {
             onrendered: function(canvas) {
@@ -109,6 +130,7 @@
     });
 }); 
         
+        
     });
 </script>
 </head>
@@ -117,7 +139,7 @@
     <div>
         <div id="divContainer"></div>
 
-        <input type="button" style="float:left" id="btClickMe" value="Need Some dots?" />
+        <input type="button" style="float:left" id="btClickMe" value="click" />
 
     </div>
     
@@ -125,6 +147,7 @@
     <div id="input">
         <textarea type="text" id="noback" cols="36" rows="8"  onkeydown="no_backspaces(event);" autofocus spellcheck="false"></textarea>
     </div>
+    
     <input type="button" id="btnSave" value="Save your Letter"/>
     <div id="img-out"></div>
 
