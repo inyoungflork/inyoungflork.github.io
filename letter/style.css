@@ -3,6 +3,7 @@ body {
     overflow: hidden;
     margin:0;
     padding:0;
+    font-family: sans-;
 }
 
 a {
@@ -66,7 +67,7 @@ arch {
 
 .archive {
     position: absolute;
-    bottom:180px;
+    bottom:170px;
     padding:10px 0;
     font-size:72px;
 }
