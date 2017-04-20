@@ -66,7 +66,7 @@ arch {
 
 .archive {
     position: absolute;
-    bottom:170px;
+    bottom:180px;
     padding:10px 0;
     font-size:72px;
 }
@@ -114,8 +114,8 @@ arch {
 
 .link {
     margin-left:10px;
-    width:370px;
-    height:370px;
+    width:360px;
+    height:360px;
     float:left;
 }
 
