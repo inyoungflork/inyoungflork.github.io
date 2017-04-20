@@ -67,7 +67,7 @@ arch {
 
 .archive {
     position: absolute;
-    bottom:150px;
+    bottom:140px;
     padding:10px 0;
     font-size:72px;
 }
