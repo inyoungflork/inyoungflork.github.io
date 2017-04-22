@@ -110,7 +110,7 @@ arch {
 }
 
 .link:hover .title{
-    opacity:0;   
+    opacity:.8;   
 }
 
 .link {
