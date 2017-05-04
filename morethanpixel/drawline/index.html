@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+
+        <meta charset="utf-8">
+        <title>Circle Eraser</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="../jquery-3.2.0.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="../fabric.js"></script>
+        <script src="../html2canvas.js"></script>
+        <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+    <script>
+
+        $( document ).ready(function() {
+        
+            //eraser
+            $("#toggle").on("click", function(){
+            $("#board").toggleClass("show");
+            });
+            
+            $(".click").click(function(){
+                $(this).hide();
+                $(".back").show();
+            });
+            
+            $(".back").click(function(){
+                $(this).hide();
+                $(".click").show();
+            });
+            
+             //freedrawingline
+            var canvas;
+
+            $(function () {
+                canvas = window._canvas = new fabric.Canvas('c');
+                canvas.backgroundColor = '';
+                canvas.isDrawingMode= 1;
+                canvas.freeDrawingBrush.color = "#000";
+                canvas.freeDrawingBrush.width = 10;
+                canvas.renderAll();
+
+            document.getElementById('colorpicker').addEventListener('click', function (e) {
+                    console.log(e.target.value);
+                    canvas.freeDrawingBrush.color = e.target.value;
+                });
+            });
+
+            });
+            
+    </script>
+
+    
+    <script type="text/javascript">
+            
+        //no backspace
+            function no_backspaces(event)
+            {
+                backspace = 8;
+                if (event.keyCode == backspace) event.preventDefault();
+            }
+    </script>
+
+    <script>
+        
+         //save
+         $(document).ready(function() {
+     
+         $(function() { 
+            $("#btnSave").click(function() { 
+            html2canvas($("body"), {
+            onrendered: function(canvas) {
+                theCanvas = canvas;
+                //document.body.appendChild(canvas);
+
+                canvas.toBlob(function(blob) {
+				saveAs(blob, "Letter.png"); 
+				});
+            }
+    });
+    });
+    }); 
+            });
+        
+            
+    </script>
+  
+</head>
+    
+<body>
+    
+    
+    <header>
+        <div id="headertop">
+            <a href="../index.html">
+                <img class="logo" src="../imgs/logo.png">
+            </a>
+        </div>    
+    </header>
+    
+    
+    <div id="toggle">
+        <div class="click">
+            <img src="../imgs/erase.png">
+        </div>
+        <div class="back">
+            <img src="../imgs/backtowrite.png">
+        </div>
+    </div>
+    
+        <div id="board">
+        <canvas id="c" class="canvas" width="2000" height="1000" style="border:0px" ></canvas>
+            
+            <li style="margin-top:10px;">
+          <div style="display: none;" id="drawing-mode-options">
+            <label for="drawing-mode-selector">Mode:</label>
+            
+            <label for="drawing-line-width">Line width:</label>
+            <input type="range" value="30" min="0" max="150" id="drawing-line-width"><br>
+            <label for="drawing-color">Line color:</label>
+            <input type="color" value="#005E7A" id="drawing-color"><br>
+          </div>
+        </li>
+        </div>
+
+  
+     <div id="input">
+        <textarea type="text" id="noback" cols="36" rows="8"  onkeydown="no_backspaces(event);" autofocus spellcheck="false"></textarea>
+    </div>
+
+     
+    <div id="btnSave">
+        <img class="top" src="../imgs/download.png">
+        <img id="save" class="pressed" src="../imgs/pressed.png">
+    </div>
+    
+    
+    
+    
+</body>
+    
+</html>

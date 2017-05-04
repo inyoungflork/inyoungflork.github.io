@@ -21,6 +21,7 @@ body {
     height:850px;
     background-color: #fafafa;  
     overflow-x: hidden;
+    cursor: url(../imgs/cursor_db.png), text;
 }
 
 .two {
@@ -40,6 +41,7 @@ textarea:focus, input:focus{
     outline: none;
 }
  
+
 /*--- header ---*/
 
 #headertop {
@@ -60,12 +62,13 @@ textarea:focus, input:focus{
     opacity:1;   
 }
 
+
 /*---time---*/
  table {
    border-collapse: collapse;
    width: 100vw; height:100vh;
    margin:auto;
-   margin-left:-5px;
+   margin-left:-4px;
      
  }
 

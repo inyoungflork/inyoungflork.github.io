@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+
+        <meta charset="utf-8">
+        <title>Circle Eraser</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="../jquery-3.2.0.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="../fabric.js"></script>
+        <script src="../html2canvas.js"></script>
+        <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+    <script>
+
+        $( document ).ready(function() {
+        
+            //eraser
+            $("#toggle").on("click", function(){
+            $("#board").toggleClass("show");
+            });
+            
+            $(".click").click(function(){
+                $(this).hide();
+                $(".back").show();
+            });
+            
+            $(".back").click(function(){
+                $(this).hide();
+                $(".click").show();
+            });
+            
+             var canvas = new fabric.Canvas('c', { selection: false });
+            //linedrawing
+            var line, isDown;
+
+            canvas.on('mouse:down', function(o){
+              isDown = true;
+              var pointer = canvas.getPointer(o.e);
+              var points = [ pointer.x, pointer.y, pointer.x, pointer.y ];
+              line = new fabric.Line(points, {
+                strokeWidth: 10,
+                fill: 'black',
+                stroke: 'black',
+                originX: 'center',
+                originY: 'center'
+              });
+              canvas.add(line);
+            });
+
+            canvas.on('mouse:move', function(o){
+              if (!isDown) return;
+              var pointer = canvas.getPointer(o.e);
+              line.set({ x2: pointer.x, y2: pointer.y });
+              canvas.renderAll();
+            });
+
+            canvas.on('mouse:up', function(o){
+              isDown = false;
+            });
+
+
+            });
+            
+    </script>
+
+    
+    <script type="text/javascript">
+            
+        //no backspace
+            function no_backspaces(event)
+            {
+                backspace = 8;
+                if (event.keyCode == backspace) event.preventDefault();
+            }
+    </script>
+
+    <script>
+        
+         //save
+         $(document).ready(function() {
+     
+         $(function() { 
+            $("#btnSave").click(function() { 
+            html2canvas($("body"), {
+            onrendered: function(canvas) {
+                theCanvas = canvas;
+                //document.body.appendChild(canvas);
+
+                canvas.toBlob(function(blob) {
+				saveAs(blob, "Letter.png"); 
+				});
+            }
+    });
+    });
+    }); 
+            });
+        
+            
+    </script>
+  
+</head>
+    
+<body>
+    
+    
+    <header>
+        <div id="headertop">
+            <a href="../index.html">
+                <img class="logo" src="../imgs/logo.png">
+            </a>
+        </div>    
+    </header>
+    
+    
+    <div id="toggle">
+        <div class="click">
+            <img src="../imgs/erase.png">
+        </div>
+        <div class="back">
+            <img src="../imgs/backtowrite.png">
+        </div>
+    </div>
+    
+        <div id="board">
+        <canvas id="c" width="2000" height="1000" style="border:0px" ></canvas>
+        </div>
+
+  
+     <div id="input">
+        <textarea type="text" id="noback" cols="36" rows="8"  onkeydown="no_backspaces(event);" autofocus spellcheck="false"></textarea>
+    </div>
+
+     
+    <div id="btnSave">
+        <img class="top" src="../imgs/download.png">
+        <img id="save" class="pressed" src="../imgs/pressed.png">
+    </div>
+    
+    
+    
+    
+</body>
+    
+</html>

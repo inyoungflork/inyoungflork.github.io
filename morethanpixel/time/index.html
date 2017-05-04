@@ -5,7 +5,9 @@
 	<script src="../jquery-3.2.0.js"></script>    
     <link rel="stylesheet" href="style.css">
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-	<title>Timer</title>
+    <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+        <script src="../html2canvas.js"></script>
+	<title>Time</title>
 
 <script type="text/javascript">
     
@@ -57,16 +59,29 @@
         div.append(input);
         $(document.body).append(div);  
         
-        $('.two').click(false);
-       
-        
-        
-    });
-                
-        
-                
+        $('.two').click(false); 
+    });               
 });
             
+            //save
+         $(document).ready(function() {
+     
+         $(function() { 
+            $("#btnSave").click(function() { 
+            html2canvas($("body"), {
+            onrendered: function(canvas) {
+                theCanvas = canvas;
+                document.body.appendChild(canvas);
+
+                canvas.toBlob(function(blob) {
+				saveAs(blob, "Letter.png"); 
+				});
+            }
+    });
+    });
+    }); 
+            });
+    
         </script>
 </head>
 <body>
@@ -128,12 +143,17 @@
        
           <td></td><td></td>
           <td></td><td></td>
+          <td></td><td></td>
+          <td></td><td></td>
+            <td></td><td></td><td></td>
           
         </tr>
-        
-        
-          
-      </table>
+        </table>
+    </div>
+    
+    <div id="btnSave">
+        <img class="top" src="../imgs/download.png">
+        <img class="pressed" src="../imgs/pressed.png">
     </div>
 
 </body>
