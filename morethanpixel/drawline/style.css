@@ -118,11 +118,12 @@ textarea:focus, input:focus{
     padding:10px;
     width:180px;  
     cursor:pointer;
-    z-index: 999;
+    z-index: 99;
 }
 
 #btnSave .top {
-    z-index:1;      
+    
+    z-index:999;      
 }
 
 #btnSave:hover .top{
