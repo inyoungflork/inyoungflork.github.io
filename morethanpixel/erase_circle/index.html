@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+
+        <meta charset="utf-8">
+        <title>Circle Eraser</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="../jquery-3.2.0.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="../fabric.js"></script>
+        <script src="../html2canvas.js"></script>
+        <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+    <script>
+
+        $( document ).ready(function() {
+        
+            //eraser
+            $("#toggle").on("click", function(){
+            $("#board").toggleClass("show");
+            });
+            
+            $(".click").click(function(){
+                $(this).hide();
+                $(".back").show();
+            });
+            
+            $(".back").click(function(){
+                $(this).hide();
+                $(".click").show();
+            });
+            
+            
+            //draw circle
+            var canvas = new fabric.Canvas('c', { selection: false });
+
+            var circle, isDown, origX, origY;
+
+            canvas.on('mouse:down', function(o){
+              isDown = true;
+              var pointer = canvas.getPointer(o.e);
+              origX = pointer.x;
+              origY = pointer.y;
+              circle = new fabric.Circle({
+                left: pointer.x,
+                top: pointer.y,
+                radius: 1,
+                strokeWidth: 0,
+                stroke: 'white',
+                fill: 'white',
+                selectable: false,
+                opacity: randomOpacity(),
+                originX: 'center', originY: 'center'
+              });
+              canvas.add(circle);
+            });
+
+            canvas.on('mouse:move', function(o){
+              if (!isDown) return;
+              var pointer = canvas.getPointer(o.e);
+              circle.set({ radius: Math.abs(origX - pointer.x) });
+              canvas.renderAll();
+            });
+
+            canvas.on('mouse:up', function(o){
+              isDown = false;
+            });
+
+                        function randomOpacity(){
+                      var opac = 0;
+                         opac =  Math.random();
+                      return opac;
+                    }
+
+            });
+            
+    </script>
+
+    
+    <script type="text/javascript">
+            
+        //no backspace
+            function no_backspaces(event)
+            {
+                backspace = 8;
+                if (event.keyCode == backspace) event.preventDefault();
+            }
+        
+        //save
+        
+         $(document).ready(function() {
+        
+         $(function() { 
+            $("#btnSave").click(function() { 
+            html2canvas($("body"), {
+            onrendered: function(canvas) {
+                theCanvas = canvas;
+                document.body.appendChild(canvas);
+
+                canvas.toBlob(function(blob) {
+				saveAs(blob, "Letter.png"); 
+				});
+            }
+    });
+    });
+    }); 
+            });
+        
+    </script>
+  
+</head>
+    
+<body>
+    
+    <header>
+        <div id="headertop">
+            <a href="../index.html">
+                <img class="logo" src="../imgs/logo.png">
+            </a>
+        </div>    
+    </header>
+    
+    
+    <div id="toggle">
+        <div class="click">
+            <img src="../imgs/erase.png">
+        </div>
+        <div class="back">
+            <img src="../imgs/backtowrite.png">
+        </div>
+    </div>
+    
+    <div id="board">
+        <canvas id="c" width="2000" height="2000" style="border:0px" ></canvas>
+    </div>
+      
+    <div id="input">
+        <textarea type="text" id="noback" cols="36" rows="8"  onkeydown="no_backspaces(event);" autofocus spellcheck="false"></textarea>
+    </div>
+     
+    <div id="btnSave">
+        <img class="top" src="../imgs/download.png">
+        <img class="pressed" src="../imgs/pressed.png">
+    </div>
+    
+    <div id="img-out"></div>
+    
+    
+</body>
+    
+</html>

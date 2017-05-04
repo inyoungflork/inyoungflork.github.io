@@ -1,122 +1,144 @@
-body {
-    width:100%; height:100%;
-    overflow: hidden;
-    margin:0;
-    padding:0;
-    font-family: sans-;
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;}
+body {line-height:1;}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {display:block;}
+li{list-style:none;}
+a {margin: 0; padding: 0; border: 0; vertical-align: baseline; background: transparent; text-decoration: none; outline: none;}
+
+header {
+    width:100%;   
+    height:80px;
+    text-align: center;
 }
 
-a {
-    text-decoration: none;   
+.logo {
+    width:200px;
+    margin:auto;
+    padding:20px;
+    font-size:24px;
+    font-family: work sans;
+    font-weight: 500;
     color:black;
+    text-align: left;
 }
 
-h1 {
+.logo p {
+    margin-top:-5px;   
+}
+
+.logo img {
     position: absolute;
-    font-weight:400;
-    font-size:18px;
-    margin-top:-20px;
-    margin-left:10px;
+    top:15px; margin-left:-70px;
+    width:60px;
+    
 }
 
-.board {
+#left {
     position:absolute;
-    font-size:72px;
-    left:30px;
+    z-index: 999;
+    width:160px;
+    height:100vh;
+    top:0px; left:0px;
+    cursor:;
 }
 
-arch {
+#right {
+    position:absolute;
+    z-index: 999;
+    width:160px;
+    height:100vh;
+    top:0px; right:0px;
+    cursor:;
+}
+
+#content {
+    position:absolute;
+    width:1000px;
+    height:640px;
+    margin:auto; left:0; right:0;
+}
+
+.box {
+    position:absolute;
+    width:100%;
+    height:100%;
+    
+}
+
+.one {
+    display:block;   
+    background-color:aliceblue;
+}
+
+.two {
+    display:none;   
+    background-color:antiquewhite;
+}
+
+
+
+#board {
+    margin-left:110px;
+    width:90vw;
+    height:90vh;
+}
+
+#board .letterbox {
     position: relative;
-    left:30px;   
-    margin-bottom:-20px; margin-top:60px;
+    width:280px;
+    height:90px;
+    border: 2px solid black;
+    background-color:white;
+    margin:70px 100px 40px 40px;
+    float:left;
 }
 
-.board a {
-    text-decoration: none;
+#board .letterbox p {
+    font-size:72px;
+    font-family:myriad pro;
+    margin:12px;
     color:black;
-    float:left;
-    margin:0px 25px;
 }
 
-
-
-.left {
+.back {
     position: absolute;
-    width:20%;   
-    height:100%;
-    overflow-y:scroll;
+    width:290px;
+    height:90px;
+    margin-top:-22px;
+    margin-left:-35px;
+    background-color: rgba(0,0,0,.1);
+    z-index:-1;
 }
 
-.left p {
-    width:100%;
-    height:;
-    margin:0;
-    text-align: center;
-}
-
-.inbox {
+.letterbox img {
     position: absolute;
-    font-size:72px;
-    width:100%;
-    height:60%;
+    width:290px;
+    margin-top:-118px;
+    margin-left:-36px;
+    background-color: white;
+    border:2px solid black;
+    display: none;
 }
 
-.inbox p {
-    margin-top:170px;   
+.letterbox:hover > img {
+    display:block;   
 }
 
-.archive {
-    position: absolute;
-    bottom:140px;
-    padding:10px 0;
-    font-size:72px;
+.letterbox .bigger {
+    width:400px;
+    margin-top:-174px;
+    margin-left:-90px;
+    border:none;
+    background-color: white;
 }
-
-.right {
-    position: absolute;
-    width:80%;
-    height:100%;
-    left:20%;
-    margin-top:30px;
-}
-
-
-.right img {
-    position:absolute;
-    width:370px;
-    height:;
-}
-
-.title {
-    position: absolute;
-    width:370px; margin-top:140px;
-    text-align: center;
-    font-size:72px;
-    opacity: 1;
-}
-
-.gifs {
-    opacity:0;
-    transition-duration: 0.5s;
-    animation-timing-function: ease-in-out;
-}
-
-.link:hover .gifs{
-    opacity:1;
-}
-
-.link:hover .thumbnail {
-    opacity:0;   
-}
-
-.link:hover .title{
-    opacity:.8;   
-}
-
-.link {
-    margin-left:10px;
-    width:360px;
-    height:360px;
-    float:left;
-}
-

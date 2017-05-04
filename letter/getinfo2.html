@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="jquery-3.2.0.js"></script> 
+    <title></title>
+    <style>
+
+
+    </style>
+</head>
+<body>
+    
+    <p id="myoutput"></p>
+    <p id="lastkey"></p>
+    
+    <hr>
+    <button type="button" id="btn-showTime">show time</button>
+    <p id="timeoutput"></p>
+    
+    
+    <script type="text/javascript">
+        
+        var keycount = 0;
+        var output = "";
+        
+        $(document).ready(function(){
+            
+            // track keyboard
+            $("body").keydown(function(e){
+                // key counter increment
+                keycount++;
+                
+                // show keycount
+                $("#myoutput").html("Sent with my moments of " + keycount + " times of key pressing");
+                
+                // add to output
+                output += e.key;
+                $("#lastkey").html("( " + output + " )");
+            });
+            
+            var startTime = new Date().getTime();
+            // show time
+            $("#btn-showTime").click(function(){
+                var outputTime = new Date().getTime() - startTime;
+                
+                // convert miliseconds to time format
+                var ms = outputTime % 1000;
+                outputTime = (outputTime - ms) / 1000;
+                var secs = outputTime % 60;
+                outputTime = (outputTime - secs) / 60;
+                var mins = outputTime % 60;
+                var hrs = (outputTime - mins) / 60;
+                
+                // outcome
+                var formattedTime = hrs + ' hours ' + mins + ' mins ' + secs + ' seconds' + ' thinking of you.';
+                
+                // show outcome in html
+                $("#timeoutput").html(formattedTime);
+            });
+        });
+        
+        function msToTime(s) {
+
+          // format time
+          return hrs + ' hours' + mins + ' minutes ' + secs + "seconds";
+        }
+    </script>
+</body>
+</html>

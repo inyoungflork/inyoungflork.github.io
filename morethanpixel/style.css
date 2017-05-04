@@ -1,0 +1,262 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;}
+body {line-height:1;}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {display:block;}
+li{list-style:none;}
+a {margin: 0; padding: 0; border: 0; vertical-align: baseline; background: transparent; text-decoration: none; outline: none;}
+
+body {
+    width:100%;
+    height:100%;
+}
+
+/*--- header ---*/
+
+#headertop {
+    position:fixed;
+    width:100%;
+    height:100px;
+    text-align: center;
+    z-index: 999;
+}
+
+#headertop p {
+    font-family: work sans;
+    font-size:18px;
+    font-weight:500;
+    font-variant-caps: all-petite-caps;
+    color:black;   
+}
+
+#headertop .logo {
+    height:60px;
+    padding:15px 0 5px;
+}
+
+
+/*--- board ---*/
+
+#sessions {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:100px;
+}
+
+#sessions p {
+    color:black;   
+}
+
+#sessions .letterbox {
+    position:absolute;
+    font-family:work sans;
+    font-size:72px;
+    padding:10px 15px 15px 10px;
+    margin:40px 0 0 40px;
+    background-color:white;
+    border:2px solid black;
+}
+
+#sessions .letterbox .back {
+    position:absolute;
+    height:94px;
+    margin:-30px;
+    background-color:rgba(0,0,0,1);
+    z-index:-1;
+}
+
+#sessions img {
+    position:absolute;
+    height:100%;
+    display:none;
+}
+
+#sessions .letterbox:hover img{
+    display:block;  
+}
+
+#sessions .letterbox:hover .back{
+    z-index: 999;
+}
+
+#sessions .letterbox:hover {
+    background-color:black;   
+}
+
+/*-1-*/
+#dear {
+    top:0px;
+}
+
+#dear .back {
+    width:954px;   
+}
+
+/*-2-*/
+#miss {
+    top:150px;  left:550px; 
+}
+
+#miss p {
+    padding-right:13px;   
+}
+
+#miss .back {
+    width:450px;   
+}
+
+/*-3-*/
+#smile {
+    top:150px; left:1020px;
+}
+
+#smile .back {
+    width:250px; 
+}
+
+/*-4-*/
+#warmth {
+    top:430px; left:0px;   
+}
+
+#warmth .back {
+    width:556px;   
+}
+
+/*-5-*/
+#presence {
+    top:480px; left:570px;   
+}
+
+#presence .back {
+    width:560px;
+}
+
+/*-6-*/
+#time {
+    top:880px; left:0px;
+    width:;
+    height:72px;
+}
+
+#time .back {
+    width:750px;   
+}
+
+/*-7-*/
+#please {
+    top:1140px; left:550px;
+}
+
+#please .back {
+    width:365px;   
+}
+
+#please .back:hover {
+    background-color:transparent;
+}
+
+#please .back img {
+    height:196px;
+    margin-top:-50px;
+    background-color:transparent;
+}
+
+/*-8-*/
+#how {
+    top:1400px; left:400px;;
+}
+
+#how .back {
+    width:940px;   
+}
+
+/*-9-*/
+#love {
+    top:1580px; left:1054px;
+}
+
+#love .back {
+    width:314px;   
+}
+
+#love .back img {
+    height:198px;
+    margin-top:-50px;
+    background-color:transparent;
+}
+
+
+
+/*---footer---*/
+
+footer {
+    position: absolute;
+    top:1820px;
+    width:100%;
+    height:80px;
+    text-align: center;
+}
+
+footer p {
+    position: absolute;
+    margin:auto;
+    margin-left:54px;
+    bottom:0px;
+    left:0; right:0;
+    font-family:work sans;
+    font-size:12px;
+}
+
+footer img {
+    position:absolute;
+    width:50px;  
+    bottom:0px;
+    opacity:.2;
+}
+
+footer img:hover {
+    opacity:1;   
+}
+
+
+
+/*---popup intro---*/
+
+#popup {
+    position:absolute;
+    margin-top:100px;
+    height:800px;
+    z-index:999;
+    background-color:rgba(255,255,255,1);
+}
+
+#popup p {
+    font-family:work sans;
+    font-size:102px;
+    font-weight:500;
+    letter-spacing: -3px;
+    padding:0px 0px 28px 15px;
+    opacity:.5;
+    cursor:url(imgs/cursor.png), auto;
+}
+
+#popup img {
+    width:90px;   
+    cursor:pointer;
+}
+
+#popup p:hover {
+    opacity:1;   
+}

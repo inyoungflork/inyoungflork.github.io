@@ -23,7 +23,7 @@
         $(document).click(function(e){
         var x = e.pageX + 'px';
         var y = e.pageY + 'px';
-        var input = $('<input type="text" class="two" id="noclick" size="" onkeydown="no_backspaces(event);" autofocus/>')
+        var input = $('<input type="text" class="two" id="noclick" size="" spellcheck="false" onkeydown="no_backspaces(event);" autofocus/>')
         var div = $('<div>').css({
             "position": "absolute",                    
             "left": x, "top": y,
@@ -84,7 +84,7 @@
         <div class="divide-img"></div>
     </div>
     
-    <input type="button" id="btnSave" value="Save your Letter"/>
+    <input type="button" id="btnSave" value="Get your Letter"/>
     <div id="img-out"></div>
     
 </body>
