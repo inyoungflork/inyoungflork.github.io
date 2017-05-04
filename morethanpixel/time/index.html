@@ -64,14 +64,14 @@
 });
             
             //save
-         $(document).ready(function() {
+            $(document).ready(function() {
      
-         $(function() { 
-            $("#btnSave").click(function() { 
-            html2canvas($("body"), {
-            onrendered: function(canvas) {
+            $(function() { 
+                $("#btnSave").click(function() { 
+                html2canvas($("body"), {
+                onrendered: function(canvas) {
                 theCanvas = canvas;
-                document.body.appendChild(canvas);
+                //document.body.appendChild(canvas);
 
                 canvas.toBlob(function(blob) {
 				saveAs(blob, "Letter.png"); 

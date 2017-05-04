@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+
+        <meta charset="utf-8">
+        <title>Topic</title>
+        <script src="../jquery-3.2.0.js"></script>    
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="script.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+        <script src="../html2canvas.js"></script>
+        
+    <script type="text/javascript">
+            
+        $( function() {
+            $( ".divide-img" ).draggable();
+            } );
+        
+        
+        $(function(){
+            $(document).click(function(e){
+            var x = e.pageX + 'px';
+            var y = e.pageY + 'px';
+            var input = $('<input type="text" class="two" id="noclick" size="" spellcheck="false" onkeydown="no_backspaces(event);" autofocus/>')
+            var div = $('<div>').css({
+                "position": "absolute",                    
+                "left": x, "top": y,
+
+            });
+            div.append(input);
+            $(document.body).append(div);  
+
+            $('.two').click(false);      
+        });       
+                
+});
+            
+    </script>
+    <script type="text/javascript">
+ 
+    function shuffle(o){ //v1.0
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
+        
+    </script>
+    <script>
+        $(document).ready(function() {
+    
+            //random imgs
+            var images = ['imgs/1.png', 'imgs/2.png', 'imgs/3.png', 'imgs/4.png','imgs/5.png','imgs/6.png','imgs/7.png','imgs/8.png','imgs/9.png','imgs/10.png'];
+            images = shuffle(images);
+
+            $('.divide-img').each(function(i){
+                $(this).css({'background-image': 'url(' + images[i] + ')'});  
+            });
+            
+            
+            //save
+            $(document).ready(function() {
+     
+                $(function() { 
+                    $("#btnSave").click(function() { 
+                    html2canvas($("body"), {
+                    onrendered: function(canvas) {
+                    theCanvas = canvas;
+
+                    canvas.toBlob(function(blob) {
+				    saveAs(blob, "Letter.png"); 
+				        });
+                        }
+                    });
+                    });
+                }); 
+            });
+            
+        }); 
+    </script>
+    
+</head>
+    
+<body>
+    
+     <header>
+        <div id="headertop">
+            <a href="../index.html">
+                <img class="logo" src="../imgs/logo.png">
+            </a>
+        </div>    
+    </header>
+    
+    <div class="wrap">
+        <div class="divide-img one"></div>
+        <div class="divide-img second"></div>
+        <div class="divide-img three"></div>
+    </div>
+    
+    <div id="btnSave">
+        <img class="top" src="../imgs/download.png">
+        <img class="pressed" src="../imgs/pressed.png">
+    </div>
+    
+</body>
+    
+</html>

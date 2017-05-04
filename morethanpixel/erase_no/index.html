@@ -20,7 +20,6 @@
             html2canvas($("body"), {
             onrendered: function(canvas) {
                 theCanvas = canvas;
-                document.body.appendChild(canvas);
 
                 canvas.toBlob(function(blob) {
 				saveAs(blob, "Letter.png"); 

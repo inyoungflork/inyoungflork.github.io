@@ -63,9 +63,10 @@
     
         
 </script>
-   <script>
-    var element_pos = 0;    // POSITION OF THE NEWLY CREATED ELEMENTS.
-    var iCnt = 0;
+<script>
+        var element_pos = 0;    // POSITION OF THE NEWLY CREATED ELEMENTS.
+        var iCnt = 0;
+        
     $(document).ready(function() {
 
         $(function() { $('#divContainer').draggable(); });
@@ -83,23 +84,22 @@
             });
            
 
-            element_pos = element_pos + $('#divContainer').width() + 20;
+        element_pos = element_pos + $('#divContainer').width() + 20;
 
-            $(dynamic_div).append('');
+        $(dynamic_div).append('');
             
             // APPEND THE NEWLY CREATED DIV TO "divContainer".
             $(dynamic_div).appendTo('#divContainer').draggable();
 
-            iCnt = iCnt + 1;
-        });
+        iCnt = iCnt + 1;
+    });
         
-        
+        //save
          $(function() { 
-    $("#btnSave").click(function() { 
-        html2canvas($("body"), {
-            onrendered: function(canvas) {
+                $("#btnSave").click(function() { 
+                html2canvas($("body"), {
+                onrendered: function(canvas) {
                 theCanvas = canvas;
-                document.body.appendChild(canvas);
 
                 canvas.toBlob(function(blob) {
 					saveAs(blob, "letter.png"); 
