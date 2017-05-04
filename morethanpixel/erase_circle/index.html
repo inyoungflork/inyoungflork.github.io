@@ -47,7 +47,7 @@
                 radius: 1,
                 strokeWidth: 0,
                 stroke: 'white',
-                fill: 'white',
+                fill: 'black',
                 selectable: false,
                 opacity: randomOpacity(),
                 originX: 'center', originY: 'center'
@@ -85,17 +85,19 @@
                 backspace = 8;
                 if (event.keyCode == backspace) event.preventDefault();
             }
+    </script>
+
+    <script>
         
-        //save
-        
+         //save
          $(document).ready(function() {
-        
+     
          $(function() { 
             $("#btnSave").click(function() { 
             html2canvas($("body"), {
             onrendered: function(canvas) {
                 theCanvas = canvas;
-                document.body.appendChild(canvas);
+                //document.body.appendChild(canvas);
 
                 canvas.toBlob(function(blob) {
 				saveAs(blob, "Letter.png"); 
@@ -106,11 +108,13 @@
     }); 
             });
         
+            
     </script>
   
 </head>
     
 <body>
+    
     
     <header>
         <div id="headertop">
@@ -130,20 +134,22 @@
         </div>
     </div>
     
-    <div id="board">
-        <canvas id="c" width="2000" height="2000" style="border:0px" ></canvas>
-    </div>
-      
-    <div id="input">
+        <div id="board">
+        <canvas id="c" width="2000" height="1000" style="border:0px" ></canvas>
+        </div>
+
+  
+     <div id="input">
         <textarea type="text" id="noback" cols="36" rows="8"  onkeydown="no_backspaces(event);" autofocus spellcheck="false"></textarea>
     </div>
+
      
     <div id="btnSave">
         <img class="top" src="../imgs/download.png">
-        <img class="pressed" src="../imgs/pressed.png">
+        <img id="save" class="pressed" src="../imgs/pressed.png">
     </div>
     
-    <div id="img-out"></div>
+    
     
     
 </body>
