@@ -74,7 +74,7 @@
                 keycount++;
                 
                 // show keycount
-                $("#myoutput").html("Sent with my moments of " + keycount + " times of key pressing");
+                $("#myoutput").html("" + keycount + " key pressed<br>while thinking of you.");
                 
                 // add to output
                 output += e.key;
@@ -92,10 +92,12 @@
                 var secs = outputTime % 60;
                 outputTime = (outputTime - secs) / 60;
                 var mins = outputTime % 60;
-                var hrs = (outputTime - mins) / 60;
+              //var hrs = (outputTime - mins) / 60;
                 
                 // outcome
-                var formattedTime = hrs + ' hours ' + mins + ' mins ' + secs + ' seconds' + ' thinking of you.';
+                var formattedTime = //hrs + ' hours ' + 
+                    
+                    mins + ' minutes ' + secs + ' seconds' +',';
                 
                 // show outcome in html
                 $("#timeoutput").html(formattedTime);
