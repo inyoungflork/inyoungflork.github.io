@@ -86,3 +86,17 @@ textarea:focus, input:focus{
 }
 
 
+/*---font---*/
+
+@font-face {
+    font-family: work sans;
+    src: url("../fontfamily/WorkSans-Regular.otf") format("opentype");
+}
+
+#noback {
+    font-size:64px;   
+    font-family: 'work sans', 'helvetica', sans-serif;
+    letter-spacing: -1px;
+}
+
+

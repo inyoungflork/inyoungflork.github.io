@@ -73,11 +73,15 @@ body {
 .output {
     display:inline-block;
     float:left;
-    border:1px solid rgba(0,0,0,.05);
+    border:1px solid rgba(0,0,0,.0);
     background-color: transparent;
     color:black;
     resize: none;
     overflow:hidden;
+}
+
+.output:hover {
+    border:1px solid rgba(0,0,0,.1);   
 }
 
 textarea:focus, input:focus{
@@ -90,6 +94,68 @@ textarea:focus, input:focus{
 
 .font1 {font-family:"Work Sans", sans-serif;}
 .font2 {font-family:"Bell Mt", serif;}
-.font3 {font-family:"Cooper Std";}
+.font3 {font-family:"Cooper Std", "impact";}
 .font4 {font-family:"Bodoni Std";}
 .font5 {font-family:"Trixie", cursive;}
+.font6 {font-family:"Circular Std";}
+.font7 {font-family:"Cloister Std";}
+.font8 {font-family:"Frutiger Std";}
+.font9 {font-family:"Gill Shadow";}
+.font10 {font-family:"Weisbaden";}
+.font11 {font-family:"perpetua";}
+
+/*---font---*/
+@font-face {
+    font-family: Work Sans;
+    src: url("../fontfamily/WorkSans-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Bell Mt;
+    src: url("../fontfamily/BellMTStd-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Cooper Std;
+    src: url("../fontfamily/CooperBlackStd.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Bodoni Std;
+    src: url("../fontfamily/BodoniStd-Poster.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Trixie;
+    src: url("../fontfamily/Trixie-Text.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Circular Std;
+    src: url("../fontfamily/CircularStd-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Cloister Std;
+    src: url("../fontfamily/CloisterStd-OpenFace.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Frutiger Std;
+    src: url("../fontfamily/FrutigerLTStd-Roman.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Gill Shadow;
+    src: url("../fontfamily/GillSansStd-Shadowed.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Weisbaden;
+    src: url("../fontfamily/WiesbadenSwingLTStd-Roman.otf") format("opentype");
+}
+
+@font-face {
+    font-family: perpetua;
+    src: url("../fontfamily/PerpetuaStd.otf") format("opentype");
+}

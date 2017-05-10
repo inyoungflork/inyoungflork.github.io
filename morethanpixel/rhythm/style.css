@@ -43,9 +43,8 @@ body {
     opacity:1;   
 }
 
-
+/*---textbox---*/
 .two {
-    font-size:54px;
     width:;
     height:;
     border:none;
@@ -84,4 +83,18 @@ textarea:focus, input:focus{
     width:100%; height:100%;
     background-color:white;
     cursor: url(../imgs/cursor_db.png), text;
+}
+
+
+/*---font---*/
+
+@font-face {
+    font-family: work sans;
+    src: url("../fontfamily/WorkSans-Regular.otf") format("opentype");
+}
+
+.two {
+    font-size:54px;   
+    font-family: 'work sans', 'helvetica', sans-serif;
+    letter-spacing: -1px;
 }

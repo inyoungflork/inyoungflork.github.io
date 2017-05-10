@@ -47,8 +47,7 @@ body {
 
 /*---textarea---*/
 #noback {
-    position: fixed;
-    font-size:72px;   
+    position: fixed;   
     border:none;
     resize: none;
     margin-top:50px; 
@@ -128,4 +127,18 @@ textarea:focus, input:focus{
 
 #btnSave:hover .top{
     display: none;      
+}
+
+
+/*---font---*/
+
+@font-face {
+    font-family: work sans;
+    src: url("../fontfamily/WorkSans-Regular.otf") format("opentype");
+}
+
+#noback {
+    font-size:64px;   
+    font-family: 'work sans', 'helvetica', sans-serif;
+    letter-spacing: -1px;
 }

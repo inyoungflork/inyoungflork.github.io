@@ -54,14 +54,15 @@ body {
       z-index: -1;
     }
 
-
-/*---textbox---*/
-.two {
-    width:100%;
-    height:;
+/*---textinput---*/
+#noback {
+    font-size:72px;   
     border:none;
-    background-color:transparent;
-    
+    resize: none;
+    margin-top:50px; 
+    margin-left:70px;
+    z-index:99;
+    background-color: transparent;
 }
 
 textarea:focus, input:focus{
@@ -71,6 +72,22 @@ textarea:focus, input:focus{
 *:focus {
     outline: none;
 }
+
+#input {
+    z-index: 99;
+    background-color: ;
+}
+
+#divContainer { 
+            background-color:white; 
+            width:40px; 
+            height:40px; 
+            padding:5px; 
+            margin:5px; 
+            font:13px Arial; 
+            cursor:move; 
+            left:20px; top:20px;
+        } 
 
 
 
@@ -108,17 +125,4 @@ textarea:focus, input:focus{
 
 #btClickMe:hover .top{
     display: none;      
-}
-
-/*---font---*/
-
-@font-face {
-    font-family: work sans;
-    src: url("../fontfamily/WorkSans-Regular.otf") format("opentype");
-}
-
-.two {
-    font-size:54px;   
-    font-family: 'work sans', 'helvetica', sans-serif;
-    letter-spacing: -1px;
 }

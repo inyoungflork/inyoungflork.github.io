@@ -25,7 +25,6 @@ body {
 }
 
 .two {
-    font-size:54px;
     width:;
     height:;
     border:none;
@@ -102,4 +101,15 @@ td {
     display: none;      
 }
 
+/*---font---*/
 
+@font-face {
+    font-family: work sans;
+    src: url("../fontfamily/WorkSans-Regular.otf") format("opentype");
+}
+
+.two {
+    font-size:54px;   
+    font-family: 'work sans', 'helvetica', sans-serif;
+    letter-spacing: -1px;
+}
