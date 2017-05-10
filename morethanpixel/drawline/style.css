@@ -93,7 +93,7 @@ textarea:focus, input:focus{
     width:180px;
     height:166px;
     z-index:99;
-    
+    cursor:pointer;
 }
 
 #toggle img {

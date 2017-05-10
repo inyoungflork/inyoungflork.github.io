@@ -21,6 +21,7 @@ body {
     height:850px;
     background-color:white;
     overflow-x:hidden;
+    cursor: url(../imgs/cursor_db_sss.png), text;
 }
 
 /*--- header ---*/
