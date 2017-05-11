@@ -51,7 +51,7 @@ body {
     border:none;
     resize: none;
     margin-top:50px; 
-    margin-left:70px;
+    margin-left:60px;
     background-color:transparent;
 }
 
@@ -136,7 +136,7 @@ textarea:focus, input:focus{
 }
 
 #noback {
-    font-size:64px;   
+    font-size:54px;   
     font-family: 'work sans', helvetica, snas-serif;
     letter-spacing: -1px;
 }

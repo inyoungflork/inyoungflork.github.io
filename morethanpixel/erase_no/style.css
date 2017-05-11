@@ -49,7 +49,7 @@ body {
     border:none;
     resize: none;
     margin-top:50px; 
-    margin-left:70px;
+    margin-left:60px;
 }
 
 
@@ -94,7 +94,7 @@ textarea:focus, input:focus{
 }
 
 #noback {
-    font-size:64px;   
+    font-size:54px;   
     font-family: 'work sans', 'helvetica', sans-serif;
     letter-spacing: -1px;
 }
