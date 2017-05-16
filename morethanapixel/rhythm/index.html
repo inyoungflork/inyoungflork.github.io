@@ -10,9 +10,10 @@
         <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
         <script src="../html2canvas.js"></script>
     <script type="text/javascript">
-            //save
+            
          $(document).ready(function() {
-     
+        
+         //save
          $(function() { 
             $("#btnSave").click(function() { 
             html2canvas($("body"), {
@@ -34,7 +35,7 @@
         $(document).click(function(e){
         var x = e.pageX + 'px';
         var y = e.pageY + 'px';
-        var input = $('<input type="text" class="two" id="noclick" size="" onkeydown="no_backspaces(event);" autofocus spellcheck="false"/>')
+        var input = $('<input type="text" class="two" id="noclick" size="30" autofocus spellcheck="false"/>')
         var div = $('<div>').css({
             "position": "absolute",                    
             "left": x, "top": y,
@@ -47,19 +48,66 @@
 
     });
                 
+       //space pressed
+            $('body').bind('keypress', function(e) {
+            //space bar
+            if (e.which == 32){
+                //e.preventDefault();
+                //alert('space');
+                
+                var pos = makeNewPosition();
+                $('#paper').animate({ top: pos[0], left: pos[1] }); 
+                
+            }
+        });
+        
+        //enter pressed
+            $('body').bind('keypress', function(e) {
+            //enter
+            if (e.which == 13){
+                //e.preventDefault();
+                //alert('space');
+                
+                var pos = makeNewPosition();
+                $('#paper').animate({ top: pos[0], left: pos[1] }); 
+                
+            }
+        });
+        
+        
+     
+        function makeNewPosition(){
+    
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $('body').height() - 700;
+    var w = $('body').width() - 1200;
+    
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+    
+    return [nh,nw];    
+    
+}
+        $("#paper").css(
+            {"background-color":get_random_color()});
         
                 
 });
             
     </script>
     <script type="text/javascript">
-            function no_backspaces(event)
-            {
-                backspace = 8;
-                if (event.keyCode == backspace) event.preventDefault();
-            }
     
-    </script>
+    function get_random_color() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.round(Math.random() * 15)];
+    }
+    return color;
+}
+    
+        
+</script>
 </head>
     
 <body>
@@ -71,7 +119,7 @@
         </div>    
     </header>
     
-    <div id="bg"></div>
+    <div id="paper"></div>
     
     <div id="btnSave">
         <img class="top" src="../imgs/download.png">

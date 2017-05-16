@@ -4,7 +4,7 @@
 <head>
 
         <meta charset="utf-8">
-        <title>My Marks</title>
+        <title>Circle Eraser</title>
         <link rel="stylesheet" href="style.css">
         <script src="../jquery-3.2.0.js"></script>
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
@@ -30,22 +30,47 @@
                 $(".click").show();
             });
             
-             //freedrawingline
-            var canvas;
+            
+            //draw circle
+            var canvas = new fabric.Canvas('body', { selection: false });
 
-            $(function () {
-                canvas = window._canvas = new fabric.Canvas('c');
-                canvas.backgroundColor = '';
-                canvas.isDrawingMode= 1;
-                canvas.freeDrawingBrush.color = "#000";
-                canvas.freeDrawingBrush.width = 10;
-                canvas.renderAll();
+            var circle, isDown, origX, origY;
 
-            document.getElementById('colorpicker').addEventListener('click', function (e) {
-                    console.log(e.target.value);
-                    canvas.freeDrawingBrush.color = e.target.value;
-                });
+            canvas.on('mouse:down', function(o){
+              isDown = true;
+              var pointer = canvas.getPointer(o.e);
+              origX = pointer.x;
+              origY = pointer.y;
+              circle = new fabric.Circle({
+                left: pointer.x,
+                top: pointer.y,
+                radius: 1,
+                strokeWidth: 0,
+                stroke: 'white',
+                fill: 'black',
+                selectable: false,
+                opacity: randomOpacity(),
+                originX: 'center', originY: 'center'
+              });
+              canvas.add(circle);
             });
+
+            canvas.on('mouse:move', function(o){
+              if (!isDown) return;
+              var pointer = canvas.getPointer(o.e);
+              circle.set({ radius: Math.abs(origX - pointer.x) });
+              canvas.renderAll();
+            });
+
+            canvas.on('mouse:up', function(o){
+              isDown = false;
+            });
+
+                    function randomOpacity(){
+                      var opac = 0;
+                         opac =  Math.random();
+                      return opac;
+                    }
 
             });
             
@@ -102,7 +127,7 @@
     
     <div id="toggle">
         <div class="click">
-            <img src="../imgs/draw.png">
+            <img src="../imgs/erase.png">
         </div>
         <div class="back">
             <img src="../imgs/backtowrite.png">
@@ -110,18 +135,7 @@
     </div>
     
         <div id="board">
-        <canvas id="c" class="canvas" width="2000" height="1000" style="border:0px" ></canvas>
-            
-            <li style="margin-top:10px;">
-          <div style="display: none;" id="drawing-mode-options">
-            <label for="drawing-mode-selector">Mode:</label>
-            
-            <label for="drawing-line-width">Line width:</label>
-            <input type="range" value="30" min="0" max="150" id="drawing-line-width"><br>
-            <label for="drawing-color">Line color:</label>
-            <input type="color" value="#005E7A" id="drawing-color"><br>
-          </div>
-        </li>
+        <canvas id="c" width="2000" height="1000" style="border:0px" ></canvas>
         </div>
 
   
