@@ -318,6 +318,7 @@ footer img:hover {
     top:675px;
     left:1300px;
     cursor:pointer;
+    z-index: 999;
     opacity:.5;
 }
 
