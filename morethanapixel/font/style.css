@@ -159,3 +159,21 @@ textarea:focus, input:focus{
     font-family: perpetua;
     src: url("../fontfamily/PerpetuaStd.otf") format("opentype");
 }
+
+/*---about---*/
+
+#about {
+    position:fixed;
+    bottom:15px;
+    width:100%;
+    z-index: -1;
+    text-align: center;
+    
+}
+
+#about p {
+    font-family: 'Trixie', 'helvetica', sans-serif;
+    font-size:15px;
+    
+}
+

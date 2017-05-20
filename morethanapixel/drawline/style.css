@@ -141,3 +141,25 @@ textarea:focus, input:focus{
     font-family: 'work sans', 'helvetica', sans-serif;
     letter-spacing: -1px;
 }
+
+/*---about---*/
+
+#about {
+    position:absolute;
+    bottom:15px;
+    width:100%;
+    z-index: -1;
+    text-align: center;
+    
+}
+
+#about p {
+    font-family: 'about', 'helvetica', sans-serif;
+    font-size:15px;
+    
+}
+
+@font-face {
+    font-family: about;
+    src: url("../fontfamily/Trixie-Text.otf") format("opentype");
+}

@@ -20,7 +20,7 @@ body {
     width:auto;
     height:850px;
     background-color: #fafafa;  
-    overflow-x: hidden;
+    overflow: hidden;
     cursor: url(../imgs/cursor_db_sss.png), text;
 }
 
@@ -112,4 +112,26 @@ td {
     font-size:54px;   
     font-family: 'work sans', 'helvetica', sans-serif;
     letter-spacing: -1px;
+}
+
+/*---about---*/
+
+#about {
+    position:absolute;
+    bottom:15px;
+    width:100%;
+    z-index: -1;
+    text-align: center;
+    
+}
+
+#about p {
+    font-family: 'about', 'helvetica', sans-serif;
+    font-size:15px;
+    
+}
+
+@font-face {
+    font-family: about;
+    src: url("../fontfamily/Trixie-Text.otf") format("opentype");
 }
