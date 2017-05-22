@@ -89,7 +89,7 @@ textarea:focus, input:focus{
 
 #paper {
     position:absolute;  
-    top:590px; left:20px;
+    top:580px; left:20px;
     z-index: 99;
     background-color:aliceblue;
     border:2px solid black;
