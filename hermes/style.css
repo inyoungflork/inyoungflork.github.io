@@ -1,0 +1,868 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent;}
+body {line-height:1;}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {display:block;}
+ul li{list-style:none;}
+a {margin: 0; padding: 0; border: 0; vertical-align: baseline; background: transparent; text-decoration: none;}
+
+html, body{
+    height:100%;
+}
+
+.clear{
+    clear:both;
+    display:block;
+    content:"";
+}
+
+header .logo{
+    width:20%;
+    top:30px;
+    left:40%;
+    position:absolute;
+    text-align: center;
+    z-index:999;
+}
+
+header .logo img{
+    height:60px;
+}
+
+header .menu{
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    width:140px;
+    text-align: right;
+    position:absolute; 
+    top:90px;
+}
+
+.menu li{
+    margin-bottom:10px;   
+}
+
+.menu a{
+    text-decoration: none;
+    color:white;
+}
+
+.menu a:hover{
+    text-decoration: none;
+    color:#f47e20;
+    transition:all .2s ease-in-out;
+}
+
+.menu .sec2{
+    margin-top:30px;
+}
+
+header nav {
+    width:30px;
+    position:absolute;
+    top:90px;
+    right:60px;
+    z-index:999;
+}
+
+header nav img {
+    width:30px;   
+    margin-bottom:10px;
+}
+
+header p{
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size:13px;
+    font-weight:400;
+    width:140px;
+    text-align: right;
+    position:absolute; 
+    top:765px;
+    z-index:999;
+}
+
+header p a{
+    text-decoration: none;
+    color:#cccccc; 
+}
+
+header p img{
+    margin-left:5px; 
+}
+
+header {
+    z-index: 999; 
+}
+
+.main {
+    height:100%;
+    background-image: url(imgs/bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.main h1 {
+    font-family:"Rockwell Std Regular", Rockwell, Courier, Times, serif;
+    font-weight:inherit;
+    font-size:20px; 
+    margin-top:-60px;
+    margin-bottom:20px;
+    color:white;
+}
+
+.discover a{
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size:18px;
+    font-weight:normal;
+    width:84px;
+    padding:5px 25px;
+    border:1px white solid;
+    margin:0 auto;
+    text-decoration: none;
+    color:white;
+}
+
+.discover a:hover{
+    color:#f47e20;
+    border:1px #f47e20 solid;
+    transition:all .2s ease-in-out;
+}
+
+.main .Nxt{
+    margin-top:380px;
+    margin-right:-90%;
+}
+
+.jw .bg {
+    width:50%;
+    height:320px;
+    background-image:url(imgs/narrow1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    color:white;
+}
+
+.jw .bg h1{
+    padding-top:80px;   
+    font-family:"Rockwell Std Regular", Rockwell, Courier;
+    font-weight:inherit;
+    font-size:28px;
+}
+
+.jw .bg h2{
+    font-family:"Rockwell Std Regular", Rockwell, Courier;
+    font-weight:inherit;
+    font-size:20px;
+    line-height:28px;
+    width:158px;
+    margin:0 auto;
+    padding-top:10px;
+    margin-bottom:30px;
+}
+
+.jw .sq{
+    width:50%;
+    height:640px;
+    background-image:url(imgs/sq1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    float:right;
+    margin-top:-320px;
+}
+
+.sq .Nxt{
+    margin-top:300px;
+    margin-left:90%; 
+}
+
+.jw .quote{
+    background-color:#f3f3f3;
+    width:50%;
+    height:320px;
+    text-align:center;
+    
+}
+
+.open1{
+    margin-top:30px;
+    margin-left:-300px;
+}
+
+.open2{
+    margin-right:-300px;
+}
+
+.quote p{
+    font-family:"Rockwell Std Regular", Rockwell, Courier, Times, serif;
+    font-weight:inherit;
+    font-size:14px;
+    line-height:21px;
+    color:#666666;
+    width:400px;
+    margin:0 auto;
+    padding-top:20px;
+    padding-bottom:7px;
+}
+
+.product {
+    text-align:center;  
+}
+
+.line {
+    width:130px;
+    height:50px;
+    border-bottom:2px #666666 solid;
+    display:inline-block;
+}
+
+.title {
+    font-family:"Rockwell Std Regular", Rockwell, Courier, Times, serif;
+    font-weight:inherit;
+    font-size:20px;
+    padding:60px 10px 0px 10px;
+    display:inline-block;
+    margin-top:0px;
+    margin-bottom:20px;
+    color:#666666;  
+}
+
+.productlist li{
+    display:inline-block;   
+    margin:0px -2px 0px -2px;
+    margin-bottom:75px;
+    position:relative;
+}
+
+.productlist li img{
+    width:250px;
+    height:352px;
+    margin-bottom:-77px;
+}
+
+.product .detailtxt {
+    width:250px;
+    height:75px;
+    background-color: rgba(255,255,255,0.8);
+    text-align: center;
+    z-index:1;
+    position:absolute;
+    opacity:0;
+}
+
+.product .productlist li:hover > .detailtxt {
+    opacity:1;   
+    transition:all .2s ease-in-out;
+}
+
+.product .detailtxt h2{
+    padding-top:10px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    letter-spacing:-0.020em;
+    font-size:16px;
+    font-weight:bold;
+    color:#666666;
+}
+
+.product  p{
+    padding-top:8px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size:12px;
+    font-weight:normal;
+    color:#999999;
+}
+
+.productlist .price{
+    font-weight:bold;
+    color:#666666;
+}
+
+.main_watch{
+    height:100%;
+    background-image: url(imgs/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+    margin-top:80px;
+}
+
+.main_watch img{
+    height:30px;
+    width:260px;
+    padding-top:290px;
+}
+
+.main_watch .text{
+    width:50%;   
+    margin:0 auto;
+    padding-top:30px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size:16px;
+    line-height: 21px;
+    font-weight:normal;
+    color:white;
+}
+
+.main_watch .discover {
+    margin-top:50px;   
+}
+
+.applewatch{
+    height:2130px;
+    text-align: center;
+}
+
+.applewatch .watches{
+    width:830px;
+    padding-top:200px;
+    margin-bottom:-4px;
+}
+
+.applewatch .text {
+    height:158px;
+    width:828px;
+    margin:0 auto;
+    background-color:white;
+    border:1px #cccccc solid;     
+}
+
+.applewatch .text a{
+    color:#999999;   
+}
+
+.applewatch .single{
+    width:663px;
+    padding-top:200px;
+    margin-bottom:-4px;
+}
+
+.applewatch .text h1{
+    padding-top:10px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    letter-spacing:-0.020em;
+    font-size:16px;
+    font-weight:bold;
+    color:#666666;
+}
+
+.applewatch p{
+    padding-top:10px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size:12px;
+    line-height:16px;
+    font-weight:normal;
+    color:#999999;
+}
+
+.applewatch .price{
+    font-weight:bold;
+    color:#666666;
+}
+
+.applewatch .text li{
+    width:313px;
+    float:left;
+    text-align:left;
+    padding:12px 40px 20px 60px;
+}
+
+#blank {
+    opacity:0;
+}
+
+#vertical_line {
+    width:1px;
+    height:120px;
+    padding:0px;
+    margin-top:20px;
+    background-color:#cccccc;
+    
+}
+
+.watch_carousel li{
+    display:inline-block;
+}
+
+.watch_carousel img{
+    width:145px;   
+}
+
+.watch_carousel .centered{
+    width:182px;   
+    margin:100px 90px 0px 90px;
+}
+
+.applewatch .view_watches h1{
+    width:264px;
+    height:32px;
+    margin:0 auto;
+    padding-top:70px;
+    padding-bottom:10px;
+}
+
+.view_watches .Prev{
+    width:19px;
+    margin-bottom:-240px;
+    margin-left:px;
+}
+
+.view_watches .Nxt{
+    width:19px;
+    margin-left:792px;
+     margin-bottom:-240px;
+}
+
+.view_watches .discover a{
+    background-color:#333333;  
+    opacity:0.9;
+}
+
+.view_watches .discover a:hover{
+    background-color:#f47e20;  
+    color:white;
+}
+
+.view_watches .sizing_guide a{
+    color:#999999;
+}
+
+.view_watches .sizing_guide a:hover{
+    color:#f47e20;
+    transition:all .2s ease-in-out;
+}
+
+.ma .sq h1{
+    padding-top:400px;   
+    font-family:"Rockwell Std Regular", Rockwell, Courier, Times, serif;
+    font-weight:inherit;
+    font-size:24px;
+    width:260px;
+    margin:0 auto;
+    line-height:34px;  
+    text-align: center;
+}
+
+.ma .sq ul{
+    text-align: center;   
+    margin-top:85px;
+}
+
+.ma .sq li{
+    display:inline-block;
+    width:180px;
+    height:30px;
+    padding-top:10px;
+    border:1px white solid;
+    font-family:"Rockwell Std Regular", Rockwell, Courier, Times, serif;
+    font-weight:inherit;
+    font-size:16px;
+    margin:5px 3px;
+}
+
+.ma .sq a{
+    color:white;   
+    text-decoration:none;
+}
+
+.ma .sq a:hover{
+    color:#fff;
+    transition:all .2s ease-in-out;
+}
+
+.ma .sq li:hover{
+    border:1px #f47e20 solid;
+    background-color: #f47e20;
+    transition:all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.ma .bg h1{
+    padding-top:50px;   
+    font-family:"Rockwell Std Regular", Rockwell, Courier, Times, serif;
+    font-weight:inherit;
+    font-size:28px;
+    width:208px;
+    margin:0 auto;
+    line-height:38px;
+}
+
+.ma .bg h2{
+    font-family:"Rockwell Std Regular", Rockwell, Courier, Times, serif;
+    font-weight:inherit;
+    font-size:20px;
+    line-height:28px;
+    width:200px;
+    margin:0 auto;
+    padding-top:10px;
+    margin-bottom:30px;
+}
+
+.ma .sq{
+    width:50%;
+    height:640px;
+    background-image:url(imgs/sq2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color:white;
+
+}
+
+
+.ma .bg{
+    float:right; 
+    margin-top:-640px;
+    width:50%;
+    height:320px;
+    background-image:url(imgs/narrow2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    color:white;
+}
+
+.ma .quote{
+    background-color:#f3f3f3;
+    width:50%;
+    height:320px;
+    text-align:center;
+    float:right; 
+    margin-top:-320px;
+}
+
+.ma .quote p{
+    width:368px;   
+}
+
+.scarves aside{
+    height:100%;
+    text-align: center; 
+    margin-bottom:905px;
+}
+
+.scarves_nature {
+    margin-top:-705px;
+}
+
+.scarves_nature li{
+    float:left;
+    width:33.3%;
+    height:905px;
+    overflow: hidden;
+}
+
+.scarves_nature li .vertical {
+    width:100%;
+    height:599px;
+}
+
+.scarves_nature li .narrow{
+    width:100%;
+    height:306px;
+}
+
+.scarves_nature li a {
+    display: block;
+    width:100%;
+    height:599px;
+}
+
+.scarves_nature li div {
+    width: 100%;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.scarves_nature li div:hover {
+    width: 110%;
+    margin:0 0 0 -5%;
+}
+
+.sf_tiles .text a{
+    color:#999999;   
+}
+
+.elephant .vertical{
+    background-image:url(imgs/sfVertical1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.elephant .narrow{
+    background-image:url(imgs/sf1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.monkey .vertical{
+    background-image:url(imgs/sfVertical2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.monkey .narrow{
+    background-image:url(imgs/sf2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.leopard .vertical{
+    background-image:url(imgs/sfVertical3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.leopard .narrow{
+    background-image:url(imgs/sf3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+.scarves h2{
+    font-family:"Rockwell Std Regular", Rockwell, Courier, Times, serif;
+    font-weight:lighter;
+    font-size:20px;
+    line-height:28px;
+    margin-bottom:40px;
+    color:white;
+}
+
+.sf_tiles {
+   position:relative;
+    height:1560px;
+}
+
+.sf_tiles img{
+    width:659px;
+    margin:0 auto;
+    padding-top:40px;
+    z-index:-1;
+    position:absolute;
+    left:0px;
+    right:0px;
+}
+
+.sf_tiles .text {
+    height:158px;
+    width:828px;
+    margin:0 auto;
+    background-color: rgba(255,255,255,0.9);
+    border:1px #cccccc solid;    
+    text-align: left;
+    margin-top:px;
+    z-index:1;
+    position:absolute;
+    left:0px;
+    right:0px;
+    margin-top:720px;
+}
+
+.scarves aside h1{
+    padding-top:536px;   
+    font-family:"Rockwell Std Regular", Rockwell, Courier, Times, serif;
+    font-weight:inherit;
+    font-size:28px;
+    width:208px;
+    margin:0 auto;
+    line-height:38px;
+    color:white;
+}
+
+.sf_tiles .text h1{
+    padding-top:10px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    letter-spacing:-0.020em;
+    font-size:16px;
+    font-weight:bold;
+    color:#666666;
+}
+
+.sf_tiles p{
+    padding-top:10px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size:12px;
+    line-height:16px;
+    font-weight:normal;
+    color:#999999;
+    width:320px;
+}
+
+.sf_tiles .price{
+    font-weight:bold;
+    color:#666666;
+}
+
+.sf_tiles .text li{
+    width:313px;
+    float:left;
+    padding:12px 40px 20px 60px;
+}
+
+.sf_tiles .more {
+    width:10px;
+    height:10px;
+    margin-right:35px;
+    padding-top:5px;
+}
+
+.sf_tiles #article2nd {
+    margin-top:1400px;   
+}
+
+.sf_tiles #article2nd p {
+    width:300px;   
+}
+
+.hermes_vid {
+    text-align: center;
+}
+
+.hermes_vid #shorter {
+    width:120px;   
+}
+
+.hermes_vid .video video,
+.hermes_vid .video source {
+    width: 100%;
+}
+
+footer .greytop{
+    margin-top:80px;
+    border-top:5px #f47e20 solid;
+    background-color:#f5f5f5;
+    height:235px;
+    text-align: center;
+    color:#f47e20;
+}
+
+footer {
+ font-family:"Rockwell Std Regular", Rockwell, Courier, Times, serif;
+    font-weight:inherit;
+    font-size:14px;  
+    margin-top: -85px;
+}
+
+footer .greytop li{
+    width:24px;
+    display:inline-block;
+    margin:18px 2px 0px 2px;
+    transition:all .2s ease-in-out;
+}
+
+footer .greytop li:hover {
+    opacity: 0.5;
+}
+
+footer .greytop a{
+    color:#f47e20;
+}
+
+footer .greytop h1{
+    padding-top:40px;
+}
+
+footer .greytop h2:hover{
+    opacity:0.5;   
+}
+
+footer h2{
+    display:inline-block;
+    margin:18px 20px;
+    transition:all .2s ease-in-out;
+}
+
+footer h2 img {
+    margin-right:3px;   
+}
+
+footer .subscribe {
+    height:85px;
+    background-color:#f47e20;
+    text-align:center;
+    color:white;
+}
+
+footer .subscribe h1{
+    padding-top:30px;
+    padding-bottom:10px;
+}
+
+footer .subscribe .input {
+    width:490px;
+    margin:0 auto;
+}
+
+footer .subscribe input {
+    width: 358px;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    background-color:#f0f0f0;
+}
+
+footer .subscribe button {
+    width: 100px;
+    border: 0;
+    padding: 10px;
+    background-color: #fff;
+    color: #f47e20;
+}
+
+
+footer .input a {
+    color:#f47e20;
+}
+
+footer .orangebottom {
+    height:58px;
+    padding-top:30px;
+    text-align: center;
+    background-color:#f47e20;
+}
+
+footer ul li{
+    display:inline-block;
+    padding-top:0px;
+}
+
+footer .orangebottom li a{
+   color:white;
+    margin:0px 15px;
+}
+
+footer .orangebottom h1 {
+    margin-top:20px;
+    font-family:"Rockwell Std Regular", Rockwell, Courier, Times, serif;
+    font-weight:100;
+    font-size:12px;
+    color:white;
+}
+
+
