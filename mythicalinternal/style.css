@@ -72,3 +72,19 @@ html, body {
 .four:hover {
     background-image: url(img/kraken_h.png)   
 }
+
+.five {
+    background-image: url(img/mandrake.png)
+}
+
+.five:hover {
+    background-image: url(img/mandrake_h.png)   
+}
+
+.six {
+    background-image: url(img/phoenix.png)
+}
+
+.six:hover {
+    background-image: url(img/phoenix_h.png)   
+}
