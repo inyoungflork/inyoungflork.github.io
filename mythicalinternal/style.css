@@ -88,3 +88,11 @@ html, body {
 .six:hover {
     background-image: url(img/phoenix_h.png)   
 }
+
+.seven {
+    background-image: url(img/haetae.png)
+}
+
+.seven:hover {
+    background-image: url(img/haetae_h.png)   
+}
