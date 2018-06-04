@@ -104,3 +104,19 @@ html, body {
 .eight:hover {
     background-image: url(img/nessie2.png)
 }
+
+.nine {
+    background-image: url(img/troll.png)
+}
+
+.nine:hover {
+    background-image: url(img/troll2.png)
+}
+
+.ten {
+    background-image: url(img/chimera.png)
+}
+
+.ten:hover {
+    background-image: url(img/chimera2.png)
+}
