@@ -46,7 +46,7 @@ html, body {
 }
 
 .one:hover {
-    background-image: url(img/yeti_h.png)   
+    background-image: url(img/yeti2.png)   
 }
 
 .two {
@@ -54,7 +54,7 @@ html, body {
 }
 
 .two:hover {
-    background-image: url(img/dragon_h.png)   
+    background-image: url(img/dragon2.png)   
 }
 
 .three {
@@ -62,7 +62,7 @@ html, body {
 }
 
 .three:hover {
-    background-image: url(img/pegasus_h.png)   
+    background-image: url(img/pegasus2.png)   
 }
 
 .four {
@@ -70,7 +70,7 @@ html, body {
 }
 
 .four:hover {
-    background-image: url(img/Kraken_dance.png)   
+    background-image: url(img/kraken2.png)   
 }
 
 .five {
@@ -78,7 +78,7 @@ html, body {
 }
 
 .five:hover {
-    background-image: url(img/mandrake_h.png)   
+    background-image: url(img/mandrake2.png)   
 }
 
 .six {
@@ -86,7 +86,7 @@ html, body {
 }
 
 .six:hover {
-    background-image: url(img/phoenix_h.png)   
+    background-image: url(img/phoenix2.png)   
 }
 
 .seven {
@@ -94,5 +94,13 @@ html, body {
 }
 
 .seven:hover {
-    background-image: url(img/haetae_h.png)   
+    background-image: url(img/haetae2.png)   
+}
+
+.eight {
+    background-image: url(img/nessie.png)
+}
+
+.eight:hover {
+    background-image: url(img/nessie2.png)
 }
